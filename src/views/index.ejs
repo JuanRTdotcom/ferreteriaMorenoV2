@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title><%- tituloPagina -%></title>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
+      
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" href="images/icono.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">  
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/slick.css">
+
+    <link rel="stylesheet" href="css/slick-theme.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="botonaver">
+        <header class="header col-12">
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__left">
+                                <!-- <ul>
+                                    <li><span class="icon-markunread"></span> ferreteriamoreno@gmail.com</li>
+                                    <li><span class="icon-shopping_cart"></span> Lun a Sab</li>
+                                    
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__right">
+                                <div class="header__top__right__social">
+                                    <a href="#"><span class="icon-facebook"></span></a>
+                                    <a href="https://api.whatsapp.com/send?phone=51992025652&text=Hola!&nbsp;Ayudamee!" target="_blank"><span class="icon-whatsapp"></span></a>
+                                    <a href="#"><span class="icon-instagram"></span></a>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a class="_noHover">
+                                        <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" href="javascript:;"> <span class="icon-pin_drop"></span>  La Mar #93 - Salaverry</a>
+                                    </a>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    <div class="col-6 col-xl-2">
+                        <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">
+            <img src="./images/logo3.png" alt="Huemura" style="max-width: 250px;">  
+            </a></h1>
+                    </div>
+
+                    <div class="col-12 col-md-10 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li><a href="#home-section" class="nav-link">Inicio</a></li>
+                                <li class="has-children">
+                                    <a href="#about-section" class="nav-link">Nosotros</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#distribucion-section" class="nav-link">Distribución</a></li>
+                                        <li><a href="#team-section" class="nav-link">Fuerza de Ventas</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li><a href="#portfolio-section" class="nav-link">Productos</a></li>
+                                <li><a href="#services-section" class="nav-link">Catálogo</a></li>
+                                <!-- <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li> -->
+                                <li><a href="#blog-section" class="nav-link">Eventos</a></li>
+                                <li><a href="#contact-section" class="nav-link">Contacto</a></li>
+
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+                </div>
+            </div>
+
+        </header>
+
+        <div class="owl-carousel owl-theme carruselmio">
+
+            <div class="item site-blocks-cover overlay" style="background-image: url(images/hero_256m.jpg);" data-aos="fade" id="home-section">
+
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="col-md-8 mt-lg-5 text-center">
+                            <h1 class="text-uppercase tituloinicialh" data-aos="fade-up">Huemura</h1>
+                            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para la industria y construcción</p>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Contáctanos</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#about-section" class="mouse smoothscroll">
+                    <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="item site-blocks-cover overlay" style="background-image: url(images/hero_23.jpg);" data-aos="fade" id="home-section">
+
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="col-md-8 mt-lg-5 text-center">
+                            <h1 class="text-uppercase tituloinicialh" data-aos="fade-up">Huemura</h1>
+                            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para la industria y construcción</p>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Contáctanos</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#about-section" class="mouse smoothscroll">
+                    <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="item site-blocks-cover overlay" style="background-image: url(images/hero_234m.jpg);" data-aos="fade" id="home-section">
+
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="col-md-8 mt-lg-5 text-center">
+                            <h1 class="text-uppercase tituloinicialh" data-aos="fade-up">Huemura</h1>
+                            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para la industria y construcción</p>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Contáctanos</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#about-section" class="mouse smoothscroll">
+                    <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="item site-blocks-cover overlay" style="background-image: url(images/hero_255m.jpg);" data-aos="fade" id="home-section">
+
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="col-md-8 mt-lg-5 text-center">
+                            <h1 class="text-uppercase tituloinicialh" data-aos="fade-up">Huemura</h1>
+                            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para la industria y construcción</p>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Contáctanos</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#about-section" class="mouse smoothscroll">
+                    <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="item site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" id="home-section">
+
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="col-md-8 mt-lg-5 text-center">
+                            <h1 class="text-uppercase tituloinicialh" data-aos="fade-up">Huemura</h1>
+                            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para la industria y construcción</p>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Contáctanos</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#about-section" class="mouse smoothscroll">
+                    <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+                    </span>
+                </a>
+            </div>
+
+            <div class="item site-blocks-cover overlay" style="background-image: url(images/hero_2344m.jpg);" data-aos="fade" id="home-section">
+
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+
+                        <div class="col-md-8 mt-lg-5 text-center">
+                            <h1 class="text-uppercase tituloinicialh" data-aos="fade-up">Huemura</h1>
+                            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">Soluciones integrales para la industria y construcción</p>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Contáctanos</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#about-section" class="mouse smoothscroll">
+                    <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="site-section cta-big-image" id="about-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center" data-aos="fade">
+                        <h2 class="section-title mb-3">NOSOTROS</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                        <figure class="circle-bg">
+                            <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+                        </figure>
+                    </div>
+                    <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mb-4">
+                            <h3 class="h3 mb-4 text-black" style="margin-bottom: .8rem!important;">Líderes del norte en <span style="font-weight: 900;">venta</span> </h3>
+                            <p>y <span style="font-weight: 900; color: black;">distribución</span> de productos para el sector ferretero, indiustrial y de contrucción, cuyo objetivo brindar es calidad y el mejor servicio a cada uno de nuestros clientes.</p>
+
+                        </div>
+
+                        <div class="mb-4">
+                            <ul class="list-unstyled ul-check success">
+                                <li> <span style="font-weight: 900;"> H</span>onestidad</li>
+                                <li> <span style="font-weight: 900;"> U</span>nidad</li>
+                                <li> <span style="font-weight: 900;"> E</span>ficiecia</li>
+                                <li> <span style="font-weight: 900;"> M</span>otivación</li>
+                                <li> <span style="font-weight: 900;"> U</span>tilidad</li>
+                                <li> <span style="font-weight: 900;"> R</span>esponsabilidad</li>
+                                <li> <span style="font-weight: 900;"> A</span>tención personalizada</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="site-section" id="distribucion-section">
+            <div class="container">
+
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-md-7 text-center">
+                        <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">CANALES DE DISTRIBUCIÓN</h2>
+                        <p class="lead" data-aos="fade-up" data-aos-delay="100">Contamos con ejecutivos de venta altamente capacitados en cuanto al uso, funciones y beneficios de cada producto que ofrecemos.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+
+                        <div class="owl-carousel slide-one-item-alt">
+                            <img src="images/slide_1.jpg" alt="Image" class="img-fluid">
+                            <img src="images/slide_2.jpg" alt="Image" class="img-fluid">
+                            <img src="images/slide_3.jpg" alt="Image" class="img-fluid">
+                            <!-- <img src="images/slide_4.jpg" alt="Image" class="img-fluid"> -->
+                        </div>
+                        <div class="custom-direction">
+                            <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="owl-carousel slide-one-item-alt-text">
+                            <div>
+                                <h2 class="section-title mb-3">Ferretería</h2>
+                                <p class="lead">Atendemos comerciantes mayoristas y minoristas.</p>
+                                <p>Brindamos productos de alta calidad a precios competitivos; trabajando de la mano con nuestros clientes, orientándolos con técnicas de venta y asesoría en implementación de estrategias que permitan elevar sus niveles de rentabilidad. Nuestro desarrollo sustancial radica en ser una de las primeras fuerzas en llegar a zonas alejadas.</p>
+
+                            </div>
+                            <div>
+                                <h2 class="section-title mb-3">Instituciones</h2>
+                                <p class="lead">Atendemor el sector industrial, agro-industrial, minero, construcción, contratación de obras y lo concerniente a instituciones privadas.</p>
+                                <p>Complementamos el servicio de venta, con asesorías técnicas para proyectos de arquitectura, industriales, comerciales, de oficinas, alumbrado público (media y baja tensión).</p>
+
+                            </div>
+                            <div>
+                                <h2 class="section-title mb-3">Licitaciones</h2>
+                                <p class="lead">Atendemos contratos de la empresa, con el Estado.</p>
+                                <p>Huemura se encuentra inscrito en el “Registro nacional de proveedores” (RNP) en cuanto a bienes y servicios; lo que nos permite participar en diferentes licitaciones con entidades públicas.</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="site-section border-bottom" id="team-section">
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">FUERZA DE VENTAS</h2>
+                        <p class="lead" data-aos="fade-up" data-aos-delay="100">Contamos con más de 30 ejecutivos de ventas altamente capacitados en cuanto al uso, funciones y beneficios de cada producto que ofrecemos.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-5" data-aos="fade-up">
+                    <div id="filtros" class="filters text-center button-group col-md-11">
+                        <button class="btn filtrosH  btn-primary active" onclick="filtrosede(this)" id="todo">Todo</button>
+                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="La_Libertad">La Libertad</button>
+                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Ancash">Ancash</button>
+                        <button class="btn  filtrosH btn-primary " onclick="filtrosede(this)" id="Lambayeque">Lambayeque</button>
+                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Piura">Piura</button>
+                        <button class="btn filtrosH  btn-primary" onclick="filtrosede(this)" id="Tumbes">Tumbes</button>
+                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Cajamarca">Cajamarca</button>
+                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Amazonas">Amazonas</button>
+                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="San_Martín">San Martín</button>
+                    </div>
+                </div>
+
+                <div class="autoplay" id="aquivendedores2">
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="site-section" id="portfolio-section">
+
+            <div class="container">
+
+                <div class="row mb-3">
+                    <div class="col-12 text-center">
+                        <h2 class="section-title mb-3">PRODUCTOS</h2>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-5">
+                    <div id="filters" class="filters text-center button-group col-md-7">
+                        <button class="btn btn-primary active" data-filter="*">Todo</button>
+                        <button class="btn btn-primary" data-filter=".shark">Shark</button>
+                        <button class="btn btn-primary" data-filter=".velkas">Velkas</button>
+                        <button class="btn btn-primary" data-filter=".olympo">Olympo</button>
+                        <button class="btn btn-primary" data-filter=".schneider">Schneider</button>
+                        <button class="btn btn-primary" data-filter=".swift">Swift</button>
+                    </div>
+                </div>
+
+                <div id="posts" class="row no-gutter">
+                    <div class="item schneider col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_1.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_1.jpg">
+                        </a>
+                    </div>
+                    <div class="item swift col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_2.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_2.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item velkas col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_3.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_3.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item shark col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+
+                        <a href="images/img_4.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_4.jpg">
+                        </a>
+
+                    </div>
+
+                    <div class="item velkas col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_5.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_5.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item velkas olympo col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_6.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_6.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item olympo col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_7.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_7.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item shark col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_8.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_8.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item shark col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_9.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_9.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item olympo col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_10.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_10.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_11.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_11.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item velkas col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_12.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_12.jpg">
+                        </a>
+                    </div>
+
+                    <div class="item olympo col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
+                        <a href="images/img_13.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
+                            <span class="icon-search2"></span>
+                            <img class="img-fluid" src="images/img_13.jpg">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="site-section border-bottom bg-light catalogoa" id="services-section" style="padding:220px 0;">
+            <div class="container ">
+
+                <div class="row d-flex justify-content-center">
+
+                    <p class="lead texxtopavercat">Conoce <span style="font-weight: 900;">todos</span> nuestros productos</p>
+                </div>
+                <div class="row d-flex justify-content-center">
+
+                    <div>
+                        <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Descargar catálogo</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="site-section" id="blog-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="section-title mb-3">EVENTOS</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos-delay="">
+                        <div class="h-entry">
+                            <div>
+                                <img src="images/evento1.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <h2 class="font-size-regular" style="color: rgb(48, 47, 47);font-weight: 900;">Huemura presenta su nuevo catálogo</h2>
+                            <div class="meta mb-4">Huemura <span class="mx-2">&bullet;</span> Ene 01, 2020<span class="mx-2">&bullet;</span> <span class="rojito" style="font-weight: 900; ">Nuevo</span></div>
+                            <p>Luego de un exaustivo y minucioso trabajo en coordinación con marcas afiliadas y jefes de Linea, huemura se complace en presentar su nuevo catálogo de productos al mejor precio del mercado.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos-delay="100">
+                        <div class="h-entry">
+                            <div>
+                                <img src="images/evento2.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <h2 class="font-size-regular" style="color: rgb(48, 47, 47);font-weight: 900;">Capacitación Indeco</h2>
+                            <div class="meta mb-4">Autry Olano <span class="mx-2">&bullet;</span> Feb 18, 2020<span class="mx-2">&bullet;</span> <span class="rojito" style="font-weight: 900; ">Nuevo</span></div>
+                            <p>Huemura en coordinación del grupo de expertos de Indeco, presenta la capacitación ZONAS LIBRES, que se llevará a cabo el 30 de enero en las instalaciones de Huemura Trujillo. Esperamos su asistencia.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos-delay="200">
+                        <div class="h-entry">
+                            <div>
+                                <img src="images/evento3.jpg" alt="Image" class="img-fluid">
+                            </div>
+                            <h2 class="font-size-regular" style="color: rgb(48, 47, 47);font-weight: 900;">Huemura rediseña su web institucional.</h2>
+                            <div class="meta mb-4">Sistemas <span class="mx-2">&bullet;</span> Feb 01, 2019<span class="mx-2">&bullet;</span> <span class="rojito" style="font-weight: 900; "></span></div>
+                            <p>En vista del alcance que una web proporciona a una empresa de ventas, Huemura se complace en presentar su nueva web institucional, posicionándose así como una que aprovecha la TI a su alcance.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <a class="_comunicaWhatsapp shadow" href="https://api.whatsapp.com/send?phone=51992025652&text=Hola!&nbsp;Ayudamee!" target="_blank">
+            <span class="icon-whatsapp" aria-hidden="true"></span>
+        </a>
+        <footer class="site-footer" id="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6  col-md-12">
+                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+                        <img class="img-fluid" src="images/mapa.jpg" alt="oficinas" style="padding: 0 0 40px 0;">
+
+                        <ul class="footer-nav direcciones">
+                            <li><span class="rojito bb">Salaverry: </span>
+                                <br><span class="icon-pin_drop"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" href="javascript:;">La Mar #93 </a>
+                                <!-- <br><span class="lnr lnr-phone-handset"></span> (044) 48 21 25</li> -->
+                            <!-- <li><span class="rojito bb"> Chiclayo:</span>
+                                <br><span class="lnr lnr-map-marker"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/d/u/0/embed?mid=1DGtLN_P29K93-PPFJzJCYGunvrgRhNZd" href="javascript:;">Av. Juan Tomis Stack 1040 - Urb. El Ingeniero</a>
+                                <br><span class="lnr lnr-phone-handset"></span> (074) 20 17 56</li>
+                            <li><span class="rojito bb"> Piura:</span>
+                                <br><span class="lnr lnr-map-marker"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/d/u/0/embed?mid=1DGtLN_P29K93-PPFJzJCYGunvrgRhNZd" href="javascript:;">Av. Vice Mz. "Q" Lt. 40 - Urb. Santa Ana</a>
+                                <br><span class="lnr lnr-phone-handset"></span> (073) 30 87 31</li>
+                            <li><span class="rojito bb"> Lima:</span>
+                                <br><span class="lnr lnr-map-marker"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/d/u/0/embed?mid=1DGtLN_P29K93-PPFJzJCYGunvrgRhNZd" href="javascript:;">Av. Óscar Benavides 5071 - Callao</a>
+                                <br><span class="lnr lnr-phone-handset"></span> (01) 743 78 73</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    
+<!-- <progress value="0" max="100" id="uploader">0%</progress> -->
+<!-- <img width="200" src="dist/imagen-no-disponible.png" height="200" id="imagen1_preview" /> -->
+<!-- <input type="file" id="fileButton" value="upload"> -->
+                    <div class="col-lg-6  col-md-12">
+                        <div class="single-footer-widget newsletter">
+
+                            <form action="#" class="p-5 bg-white">
+
+                                <h2 class="h4 text-black mb-5">CONTÁCTANOS</h2>
+
+                                <div class="row form-group">
+                                    <div class="col-lg-6 col-md-12">
+                                        <label class="text-black" for="fname">Nombres</label>
+                                        <input type="text" id="fname" class="form-control">
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <label class="text-black" for="lname">Apellidos</label>
+                                        <input type="text" id="lname" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+
+                                    <div class="col-12">
+                                        <label class="text-black" for="email">E-mail</label>
+                                        <input type="email" id="email" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+
+                                    <div class="col-12">
+                                        <label class="text-black" for="subject">Asunto</label>
+                                        <input type="subject" id="subject" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label class="text-black" for="message">Mensaje</label>
+                                        <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Escribe tu mensaje aquí..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <input type="submit" value="Enviar Mensaje" class="btn btn-primary btn-md text-white botnonabajo">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div class=" pt-5">
+                            <p class="fin" style="margin-bottom: 0px !important;">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy; by<a href="https://cv-juan.web.app/" target="_blank" class="rojito"> JuanRTdotcom</a>
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> 
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    </footer>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script src="js/juan.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
