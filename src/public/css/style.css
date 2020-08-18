@@ -2613,3 +2613,14 @@ a:focus{
 
   
 }
+
+.team-member .img-fluid {
+  transition: all .2s;
+  filter: grayscale(1);
+  cursor: pointer;
+
+}
+.team-member .img-fluid:hover {
+  filter: grayscale(0);
+  
+}

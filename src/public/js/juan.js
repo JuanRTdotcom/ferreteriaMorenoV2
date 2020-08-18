@@ -18,108 +18,108 @@ var dataVendedores=[
    
     ]
     
-    var la_libertad = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+//     var la_libertad = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                 
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">L</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;"><br></p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">L</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">I</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">B</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">T</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">D</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">L</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;"><br></p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">L</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">I</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">B</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">T</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">D</p>
 
-    </ul>`
+//     </ul>`
 
-var ancash = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+// var ancash = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">C</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">H</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">C</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">H</p>
 
-    </ul>`
-var lambayeque = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+//     </ul>`
+// var lambayeque = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">L</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">B</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Y</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Q</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">U</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">L</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">B</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Y</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Q</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">U</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
 
-    </ul>`
-var piura = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+//     </ul>`
+// var piura = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">P</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">I</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">U</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">P</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">I</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">U</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
 
-    </ul>`
+//     </ul>`
 
-var tumbes = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+// var tumbes = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">T</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">U</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">B</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">T</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">U</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">B</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">E</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
 
-    </ul>`
+//     </ul>`
 
-var cajamarca = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+// var cajamarca = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">C</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">J</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">C</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">C</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">J</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">C</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
 
-    </ul>`
+//     </ul>`
 
-var amazonas = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+// var amazonas = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Z</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">O</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Z</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">O</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
 
-    </ul>`
+//     </ul>`
 
-var san_martin = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
+// var san_martin = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;"><br></p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">T</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Í</p>
-    <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">S</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;"><br></p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">M</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">A</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">R</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">T</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">Í</p>
+//     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">N</p>
 
-    </ul>`
+//     </ul>`
 
 
 /*****************************************end-helpers*****************************************************/
@@ -147,42 +147,42 @@ function Vendedores(datausar, t) {
    var contienevendedo = document.createElement('div')
    contienevendedo.setAttribute("class", "team-member")
    var contienevende1 = document.createElement('figure')
-   if(datausar[t].zona == "La_Libertad") {
-       contienevende1.innerHTML = la_libertad ////
-   } else if(datausar[t].zona == "Ancash") {
-       contienevende1.innerHTML = ancash ////
-   } else if(datausar[t].zona == "Lambayeque") {
-       contienevende1.innerHTML = lambayeque ////
-   } else if(datausar[t].zona == "Piura") {
-       contienevende1.innerHTML = piura ////
-   } else if(datausar[t].zona == "Tumbes") {
-       contienevende1.innerHTML = tumbes ////
-   } else if(datausar[t].zona == "Cajamarca") {
-       contienevende1.innerHTML = cajamarca ////
-   } else if(datausar[t].zona == "Amazonas") {
-       contienevende1.innerHTML = amazonas ////
-   } else if(datausar[t].zona == "San_Martín") {
-       contienevende1.innerHTML = san_martin ////
-   }
+//    if(datausar[t].zona == "La_Libertad") {
+//        contienevende1.innerHTML = la_libertad ////
+//    } else if(datausar[t].zona == "Ancash") {
+//        contienevende1.innerHTML = ancash ////
+//    } else if(datausar[t].zona == "Lambayeque") {
+//        contienevende1.innerHTML = lambayeque ////
+//    } else if(datausar[t].zona == "Piura") {
+//        contienevende1.innerHTML = piura ////
+//    } else if(datausar[t].zona == "Tumbes") {
+//        contienevende1.innerHTML = tumbes ////
+//    } else if(datausar[t].zona == "Cajamarca") {
+//        contienevende1.innerHTML = cajamarca ////
+//    } else if(datausar[t].zona == "Amazonas") {
+//        contienevende1.innerHTML = amazonas ////
+//    } else if(datausar[t].zona == "San_Martín") {
+//        contienevende1.innerHTML = san_martin ////
+//    }
 
    var contienevende = document.createElement('img')
    contienevende.setAttribute("src", datausar[t].foto) ////
    contienevende.setAttribute("alt", "Image")
    contienevende.setAttribute("class", "img-fluid")
 
-   var contienevende2 = document.createElement('div')
-   contienevende2.setAttribute("class", "p-3")
-   var contieneven21 = document.createElement('h3')
-   contieneven21.textContent = datausar[t].nombre ////
-   var contieneven22 = document.createElement('span')
-   contieneven22.setAttribute("class", "position")
-   contieneven22.textContent = datausar[t].rubro + " - " + datausar[t].telefono ////
+//    var contienevende2 = document.createElement('div')
+//    contienevende2.setAttribute("class", "p-3")
+//    var contieneven21 = document.createElement('h3')
+//    contieneven21.textContent = datausar[t].nombre ////
+//    var contieneven22 = document.createElement('span')
+//    contieneven22.setAttribute("class", "position")
+//    contieneven22.textContent = datausar[t].rubro + " - " + datausar[t].telefono ////
 
-   contienevende2.appendChild(contieneven21)
-   contienevende2.appendChild(contieneven22)
+//    contienevende2.appendChild(contieneven21)
+//    contienevende2.appendChild(contieneven22)
    contienevende1.appendChild(contienevende)
    contienevendedo.appendChild(contienevende1)
-   contienevendedo.appendChild(contienevende2)
+//    contienevendedo.appendChild(contienevende2)
    contienevendedor.appendChild(contienevendedo)
    lugarvendedores.appendChild(contienevendedor)
 }
@@ -212,42 +212,47 @@ function filtrosede(a) {
 
        llenar(datausar)
    }
-   $('.autoplay').slick({
-       infinite: false,
-       speed: 300,
-       draggable: false,
-       slidesToShow: 4,
-       slidesToScroll: 3,
-       responsive: [{
-               breakpoint: 1024,
-               settings: {
-                   slidesToShow: 3,
-                   draggable: false,
-                   slidesToScroll: 3,
-                   infinite: true,
-                   dots: false
-               }
-           }, {
-               breakpoint: 600,
-               settings: {
-                   slidesToShow: 2,
-                   draggable: false,
-                   mobileFirst: true,
-                   slidesToScroll: 2
-               }
-           }, {
-               breakpoint: 480,
-               settings: {
-                   slidesToShow: 1,
-                   draggable: false,
-                   slidesToScroll: 1
-               }
-           }
-           // You can unslick at a given breakpoint now by adding:
-           // settings: "unslick"
-           // instead of a settings object
-       ]
-   });
+//    $('.autoplay').slick({ 
+//     infinite: true,
+//     slidesToShow: 2,
+//     slidesToScroll: 2
+//    })
+//    $('.autoplay').slick({
+//        infinite: false,
+//        speed: 300,
+//        draggable: false,
+//        slidesToShow: 8,
+//        slidesToScroll: 8,
+//        responsive: [{
+//                breakpoint: 1024,
+//                settings: {
+//                    slidesToShow: 3,
+//                    draggable: false,
+//                    slidesToScroll: 3,
+//                    infinite: true,
+//                    dots: false
+//                }
+//            }, {
+//                breakpoint: 600,
+//                settings: {
+//                    slidesToShow: 2,
+//                    draggable: false,
+//                    mobileFirst: true,
+//                    slidesToScroll: 2
+//                }
+//            }, {
+//                breakpoint: 480,
+//                settings: {
+//                    slidesToShow: 1,
+//                    draggable: false,
+//                    slidesToScroll: 1
+//                }
+//            }
+//            // You can unslick at a given breakpoint now by adding:
+//            // settings: "unslick"
+//            // instead of a settings object
+//        ]
+//    });
    $('.filtrosH ').removeClass('active');
    var elementos = document.getElementById(a.id)
    elementos.classList.add("active")
