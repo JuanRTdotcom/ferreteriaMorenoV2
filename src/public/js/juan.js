@@ -17,6 +17,7 @@ var dataVendedores=[
     { nombre:"Analí Días",rubro:"Ferretería",telefono:"999999999",foto:"images/person_7.jpg",zona:"Piura"}
    
     ]
+    
     var la_libertad = `<ul class="social nombrezona" style="color: white;display: flex;justify-content: flex-start;flex-direction: column;">
                 
     <p style="padding: 0;margin: 0;text-align: center;transform: rotate(0);font-weight: 400;">L</p>
