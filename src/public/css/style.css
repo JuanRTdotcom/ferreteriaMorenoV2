@@ -583,6 +583,7 @@ body:after {
   .site-blocks-cover h1 {
     font-size: 3rem;
     font-weight: 400;
+    text-shadow: 1px 2px 5px rgb(0, 0, 0);
     color: #fff;
     font-weight: 900; }
     @media (max-width: 991.98px) {
@@ -2055,7 +2056,14 @@ figure figcaption {
   font-size: 8pt;
 }
 .catalogoa{
-  background: url(../images/catalogo.jpg)center;
+  background: url(../images/catalogo.jpg);
+  /* Set a specific height */
+  min-height: 400px; 
+max-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .catalogozona{
@@ -2591,4 +2599,11 @@ a:focus{
 ._comunicaWhatsapp:active{
 	color: #0DC143;
 	font-weight: 900;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  
 }
