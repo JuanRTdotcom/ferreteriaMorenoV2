@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5,
   border-width: 2px; }
 
 .text-black {
-  color: #000 !important; }
+  color: #000 ; }
 
 .bg-black {
   background: #000 !important; }
@@ -116,7 +116,9 @@ body:after {
 
 .site-footer {
   padding: 4em 0;
-  background: #222222; }
+  background:url('../images/footer.jpg')center;
+  background-size: cover; 
+}
   @media (min-width: 768px) {
     .site-footer {
       padding: 8em 0 0; } }
@@ -2615,12 +2617,25 @@ a:focus{
 }
 
 .team-member .img-fluid {
-  transition: all .2s;
+  transition: filter .5s;
   filter: grayscale(1);
   cursor: pointer;
 
 }
 .team-member .img-fluid:hover {
   filter: grayscale(0);
+  border:1px gray solid;
   
+}
+
+form .text-black{
+  color:white;
+}
+._miFormEnvios input{
+  background: rgba(0, 0, 0, 0);
+  color: white;
+}
+._miFormEnvios textarea{
+  background: rgba(0, 0, 0, 0);
+  color: white;
 }

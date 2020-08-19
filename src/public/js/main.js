@@ -10,6 +10,7 @@ jQuery(document).ready(function($) {
 
 	
 	$(".loader").delay(1000).fadeOut("slow");
+	
   $("#overlayer").delay(1000).fadeOut("slow");	
   
 
@@ -450,17 +451,20 @@ owl.owlCarousel({
 //   });
 
 $('.autoplay').slick({
-	infinite: false,
-	speed: 300,
-	accessibility:true,
-	draggable:false,
-	slidesToShow: 4,
+	infinite: true,
+	autoplay:true,
+	speed: 1000,
+	accessibility:false,
+	pauseOnHover:true,
+	arrows:false,
+	draggable:true,
+	slidesToShow: 8,
 	slidesToScroll: 3,
 	responsive: [
 	  {
 		breakpoint: 1024,
 		settings: {
-		  slidesToShow: 3,
+		  slidesToShow: 4,
 		  draggable:true,
 		  slidesToScroll: 3,
 		  infinite: true,
@@ -470,7 +474,7 @@ $('.autoplay').slick({
 	  {
 		breakpoint: 600,
 		settings: {
-		  slidesToShow: 2,
+		  slidesToShow: 3,
 		  draggable:true,
 		  mobileFirst:true,
 		  slidesToScroll: 2
@@ -479,9 +483,9 @@ $('.autoplay').slick({
 	  {
 		breakpoint: 480,
 		settings: {
-		  slidesToShow: 1,
+		  slidesToShow: 3,
 		  draggable:true,
-		  slidesToScroll: 1
+		  slidesToScroll: 2
 		}
 	  }
 	  // You can unslick at a given breakpoint now by adding:
