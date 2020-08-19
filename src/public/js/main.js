@@ -8,6 +8,17 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
+	var owl = $('.carruselmio');
+	owl.owlCarousel({
+		items:1,
+		loop:true,
+		margin:10,
+		autoplay:true,
+		autoplayTimeout:5000,
+		animateOut: 'fadeOut',
+		autoplayHoverPause:false
+	});
+	
 	
 	$(".loader").delay(1000).fadeOut("slow");
 	
@@ -424,17 +435,6 @@ $container.imagesLoaded( function(){
 
 
 
-
-var owl = $('.carruselmio');
-owl.owlCarousel({
-    items:1,
-    loop:true,
-    margin:10,
-    autoplay:true,
-	autoplayTimeout:5000,
-	animateOut: 'fadeOut',
-    autoplayHoverPause:false
-});
 
 
 
