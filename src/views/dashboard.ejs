@@ -1,0 +1,29 @@
+<%- include ('_codigoPedazos/inicioDashboard.ejs') -%>
+   
+    <div class="container-fluid" id="_contenidoCambiante">
+        <div class="d-sm-flex align-items-center justify-content-center mb-4"
+            style="flex-direction: column; ">
+            <div class="working" style="padding:20px;background:url('/images/fondo.png')center;background-size: cover">
+                <img class="mueve" src="/images/working.png" style="width: 100%;" alt="">
+            </div>
+            <br>
+            <div class="text-center"  style="color: #4e73df;font-size: 20px;font-weight: 300;"> En construcción <span id="trabajando">_</span>
+               
+                </div> 
+            
+        </div>
+    </div>
+
+    <script>
+        let _textoTrabajando = document.getElementById('trabajando')
+        let _contador = true
+        setInterval(()=>{
+            
+            if(_contador){_textoTrabajando.style.color='#ff000000';_contador=false}
+            else {_textoTrabajando.style.color='#4e73df';_contador=true}
+                       
+        },650)
+    </script>
+    <%- include ('_codigoPedazos/finalDashboard.ejs') -%>
+    <%- include ('_codigoPedazos/jsPaginas.ejs') -%>
+    <%- include ('_codigoPedazos/cierraHtml.ejs') -%>

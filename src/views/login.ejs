@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Ferretería Moreno</title>
+    <%- include ('_codigoPedazos/estilosCabecera.ejs') -%>
+    <link rel="icon" type="image/png" href="/images/ico.png" />
+</head>
+<body>
+    <%- include ('_codigoPedazos/alertasMensaje.ejs') -%>
+    <div style="width: 100vw;height: 100vh;background:#009fc7;display: flex;justify-content: center;align-items: center;">
+        <div class="shadow-lg p-4  bg-white rounded">
+            <form  action="/login" method="POST">
+                <div class="input-group mb-3" style="text-align: center;">
+                    <h1  class="col-12"><img src="/images/ico.png" style="max-width: 160px;" alt="" srcset=""></h1>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><span class="icon-user"></span></span>
+                    </div>
+                    <input id="idUsuario" type="text" name="username" class="form-control" autocomplete="off" autofocus aria-label="Username" placeholder="Ingresa usuario" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><span class="icon-lock"></span></span>
+                    </div>
+                    <input id="idContra" type="password" name="password" autocomplete="current-password" class="form-control"  aria-label="Username" placeholder="Ingresar contraseña" aria-describedby="basic-addon1" required>
+                </div>
+                <div class="input-group mb-3">
+                    <button type="submit" class="btn btn-dark col-12" style="background: #009fc7;border: 1px #009fc7 solid;min-height: 38px;" id="btnIngresar"><span class="spinner-border spinner-border-sm" id="miLoader" style="display: none;margin: auto;" role="status" aria-hidden="true"></span> <e id="miIngreso"> Ingresar</e></button>
+                </div>
+
+                <div class="input-group mb-3">
+                    <a href="/" class="btn btn-link col-12" style="color: #0184a585;">Salir </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('_codigoPedazos/estilosFooter.ejs')-%>
+</body>
+</html>

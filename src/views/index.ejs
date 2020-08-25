@@ -3,11 +3,7 @@
 
 <head>
     <title><%- tituloPagina -%></title>
-    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
-    <script
-      src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
-      
-  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+        
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -16,20 +12,20 @@
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
 
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">  
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-datepicker.css"> -->
 
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
 
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/slick.css">
 
-    <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -53,14 +49,15 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="header__top__right">
                                 <div class="header__top__right__social">
-                                    <a href="#"><span class="icon-facebook"></span></a>
-                                    <a href="https://api.whatsapp.com/send?phone=51980497850&text=Hola!&nbsp;Ayudamee!" target="_blank"><span class="icon-whatsapp"></span></a>
-                                    <a href="#"><span class="icon-instagram"></span></a>
+                                    <a title="Facebook" href="#"><span class="icon-facebook"></span></a>
+                                    <a title="WhatsApp" href="https://api.whatsapp.com/send?phone=51980497850&text=Hola!&nbsp;Ayudamee!" target="_blank"><span class="icon-whatsapp"></span></a>
+                                    <a title="Instagram" href="#"><span class="icon-instagram"></span></a>
+                                    <a title="Ubicación" data-fancybox data-type="iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" href="javascript:;"> <span class="icon-pin_drop"></span></a>
+                                    
+                                    
                                 </div>
                                 <div class="header__top__right__auth">
-                                    <a class="_noHover">
-                                        <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" href="javascript:;"> <span class="icon-pin_drop"></span>  La Mar #93 - Salaverry</a>
-                                    </a>    
+                                    <a href="/login"><span class="icon-user"></span> &nbsp;Ingresar </a>   
                                 </div>
                             </div>
                         </div>
@@ -112,9 +109,17 @@
 
                                     </ul>
                                 </li>
+                                <li> <a href="#portfolio-section" class="nav-link">Productos</a></li>
+                                
+                                <li class="has-children">
+                                    <a href="#services-section" class="nav-link">Catálogo</a>
+                                    <ul class="dropdown">
+                                        <li><a href="/catalogo-online" class="nav-link">Catálogo Online</a></li>
+                                        
 
-                                <li><a href="#portfolio-section" class="nav-link">Productos</a></li>
-                                <li><a href="#services-section" class="nav-link">Catálogo</a></li>
+                                    </ul>
+                                </li>
+
                                 <!-- <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li> -->
                                 <li><a href="#blog-section" class="nav-link">Eventos</a></li>
                                 <li><a href="#contact-section" class="nav-link">Contacto</a></li>
@@ -326,8 +331,6 @@
                             <img src="images/slide_2.jpg" alt="Image" class="img-fluid">
                             <img src="images/slide_3.jpg" alt="Image" class="img-fluid">
                             
-                            <!-- <img src="images/slide_3.jpg" alt="Image" class="img-fluid"> -->
-                            <!-- <img src="images/slide_4.jpg" alt="Image" class="img-fluid"> -->
                         </div>
                         <div class="custom-direction">
                             <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
@@ -355,13 +358,6 @@
                                 <p>Ofrecemos productos duraderos y resistentes con garantía que nuestras marcas afiliadas nos aseguran.</p>
 
                             </div>
-                            <!-- <div>
-                                <h2 class="section-title mb-3">Licitaciones</h2>
-                                <p class="lead">Atendemos contratos de la empresa, con el Estado.</p>
-                                <p>Huemura se encuentra inscrito en el “Registro nacional de proveedores” (RNP) en cuanto a bienes y servicios; lo que nos permite participar en diferentes licitaciones con entidades públicas.</p>
-
-                            </div> -->
-
                         </div>
 
                     </div>
@@ -373,23 +369,10 @@
             <div class="container">
                 <div class="row mb-5 justify-content-center">
                     <div class="col-md-8 text-center">
-                        <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">MARCAS QUE DISTRIUBIMOS</h2>
+                        <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">MARCAS QUE DISTRIBUIMOS</h2>
                         <p class="lead" data-aos="fade-up" data-aos-delay="100">Nos fidelizamos con mas de <strong> 10 </strong>marcas reconocidas en el mercado peruano.</p>
                     </div>
                 </div>
-                <!-- <div class="row justify-content-center mb-5" data-aos="fade-up">
-                    <div id="filtros" class="filters text-center button-group col-md-11">
-                        <button class="btn filtrosH  btn-primary active" onclick="filtrosede(this)" id="todo">Todo</button>
-                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="La_Libertad">La Libertad</button>
-                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Ancash">Ancash</button>
-                        <button class="btn  filtrosH btn-primary " onclick="filtrosede(this)" id="Lambayeque">Lambayeque</button>
-                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Piura">Piura</button>
-                        <button class="btn filtrosH  btn-primary" onclick="filtrosede(this)" id="Tumbes">Tumbes</button>
-                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Cajamarca">Cajamarca</button>
-                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="Amazonas">Amazonas</button>
-                        <button class="btn  filtrosH btn-primary" onclick="filtrosede(this)" id="San_Martín">San Martín</button>
-                    </div>
-                </div> -->
 
                 <div class="autoplay" id="aquivendedores2">
 
@@ -404,7 +387,7 @@
 
                 <div class="row mb-3">
                     <div class="col-12 text-center">
-                        <h2 class="section-title mb-3">PRODUCTOS<span id="_verTodosProductos" class="badge badge-pill badge-primary" style="font-size: 12px;position:relative;cursor:pointer;left: 10px;background-color:#4f4f4f;color:white;vertical-align: top;">Ver Catálogo</span></h2> 
+                        <h2 class="section-title mb-3">PRODUCTOS<span id="_verTodosProductos" class="badge badge-pill badge-primary" style="font-size: 12px;position:relative;cursor:pointer;left: 10px;background-color:#0dc143;color:white;vertical-align: top;"><span class="icon-image"></span>  Catálogo</span></h2> 
                     </div>
                 </div>
 
@@ -593,30 +576,19 @@
         <a class="_comunicaWhatsapp shadow" href="https://api.whatsapp.com/send?phone=51980497850&text=Hola!&nbsp;Ayudamee!" target="_blank">
             <span class="icon-whatsapp" aria-hidden="true"></span>
         </a>
-        <footer class="site-footer parallax" id="contact-section">
+        <footer class="site-footer parallax" id="contact-section" >
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6  col-md-12">
                         <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
                         <img class="img-fluid" src="images/mapa.png" alt="oficinas" style="padding: 0 0 40px 0;">
 
-                        <ul class="footer-nav direcciones">
+                        <ul class="footer-nav direcciones" style="margin-bottom: 30px !important;">
                             <li><span class="rojito bb">La Libertad: </span>
                                 <br><span class="icon-pin_drop"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" href="javascript:;">La Mar #93 - Salaverry</a>
                                 <br><span class="icon-pin_drop"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3545.487829714546!2d-78.98056003123745!3d-8.221478369631459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad18e0beeaa7f9%3A0x2d3f57572a8e35b0!2sLa%20Mar%2093%2C%20Salaverry%2013611!5e0!3m2!1ses!2spe!4v1597431983539!5m2!1ses!2spe" href="javascript:;">Calle industrial Astillero Marpol (pronta sucursal).</a>
 
-                               
-                                <!-- <br><span class="lnr lnr-phone-handset"></span> (044) 48 21 25</li> -->
-                            <!-- <li><span class="rojito bb"> Chiclayo:</span>
-                                <br><span class="lnr lnr-map-marker"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/d/u/0/embed?mid=1DGtLN_P29K93-PPFJzJCYGunvrgRhNZd" href="javascript:;">Av. Juan Tomis Stack 1040 - Urb. El Ingeniero</a>
-                                <br><span class="lnr lnr-phone-handset"></span> (074) 20 17 56</li>
-                            <li><span class="rojito bb"> Piura:</span>
-                                <br><span class="lnr lnr-map-marker"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/d/u/0/embed?mid=1DGtLN_P29K93-PPFJzJCYGunvrgRhNZd" href="javascript:;">Av. Vice Mz. "Q" Lt. 40 - Urb. Santa Ana</a>
-                                <br><span class="lnr lnr-phone-handset"></span> (073) 30 87 31</li>
-                            <li><span class="rojito bb"> Lima:</span>
-                                <br><span class="lnr lnr-map-marker"></span> <a data-fancybox data-type="iframe" data-src="https://www.google.com/maps/d/u/0/embed?mid=1DGtLN_P29K93-PPFJzJCYGunvrgRhNZd" href="javascript:;">Av. Óscar Benavides 5071 - Callao</a>
-                                <br><span class="lnr lnr-phone-handset"></span> (01) 743 78 73</a>
-                            </li> -->
+                              
                         </ul>
                     </div>
                     
@@ -648,14 +620,6 @@
                                         <input type="email" id="email" class="form-control">
                                     </div>
                                 </div>
-
-                                <!-- <div class="row form-group">
-
-                                    <div class="col-12">
-                                        <label class="text-black" for="subject">Asunto</label>
-                                        <input type="subject" id="subject" class="form-control">
-                                    </div>
-                                </div> -->
 
                                 <div class="row form-group">
                                     <div class="col-md-12">
@@ -695,11 +659,12 @@
     </div>
     </footer>
     </div>
-
+    
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/popper.min.js"></script>
+    <!-- <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script> -->
+    <!-- <script src="js/jquery-ui.js"></script> -->
+    <!-- <script src="js/popper.min.js"></script> -->
+    <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
@@ -707,7 +672,7 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
+    
     <script type="text/javascript" src="js/slick.min.js"></script>
 
     <script src="js/juan.js"></script>

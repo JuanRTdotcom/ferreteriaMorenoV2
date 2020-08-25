@@ -1,0 +1,60 @@
+
+<% if (error.length > 0){ %>
+    
+  <div class="card bg-danger text-white shadow-sm" id="_msgAlert" style="    position: fixed;
+  z-index: 9;
+  top: -50px;
+  transition: .6s;
+  width: 100%;
+  right: 0;
+  padding: 4px 12px;
+  border: 0px solid #e3e6f0 !important;">
+    <div class="card-body text-center" style="padding:0 !important">
+       <i class="fa fa-user"></i><span style="font-size: 18px;" class="icon-close"></span> ERROR : <%= error%> 
+      
+    </div>
+  </div>
+<script>
+  
+    if(document.getElementById('_msgAlert')){
+      setTimeout(()=>{
+document.getElementById('_msgAlert').style.top = '0px'
+      },250)
+      
+          setTimeout(()=>{
+          // document.getElementById('_msgAlert').classList.toggle('fade')
+          document.getElementById('_msgAlert').style.top = '-50px'
+      },3000)
+      }
+</script>
+<%  }  %> 
+<% if (succes_msg.length > 0){ %>
+    
+        <div class="card bg-success text-white shadow-sm" id="_msgAlert" style="    position: fixed;
+        z-index: 9;
+        top: -50px;
+        transition: .6s;
+        width: 100%;
+        right: 0;
+        padding: 4px 12px;
+        border: 0px solid #e3e6f0 !important;">
+          <div class="card-body text-center" style="padding:0 !important">
+            <i class="fa fa-check-circle"></i><span style="font-size: 18px;" class="icon-checkmark"></span> CORRECTO : <%= succes_msg%>
+            
+          </div>
+        </div>
+      <script>
+          
+     
+    if(document.getElementById('_msgAlert')){
+      setTimeout(()=>{
+document.getElementById('_msgAlert').style.top = '0px'
+      },250)
+      
+          setTimeout(()=>{
+          // document.getElementById('_msgAlert').classList.toggle('fade')
+          document.getElementById('_msgAlert').style.top = '-50px'
+      },3000)
+      }
+      </script>
+  <%  }  %> 

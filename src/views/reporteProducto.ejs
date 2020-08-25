@@ -1,0 +1,70 @@
+<%- include ('_codigoPedazos/inicioDashboard.ejs') -%>
+
+<%- include ('_codigoPedazos/alertasMensaje.ejs') -%>
+<div class="container " >
+  <div class="row">
+
+    
+    
+      
+      
+
+          <% if(_dataProductos.length > 0){%>
+        <div class="card-columns">
+
+            <%let i = 0; _dataProductos.forEach(e=>{ i++; %>
+              <div class="card shadow" >
+                <img src="<%=e.imagenURL%>" class="card-img-top"  alt="<%=e.nombre%>">
+                <div class="card-body">
+                  <h5 class="card-title" style="font-size: 18px;font-weight: 700;"><%=e.nombre%></h5>
+               
+                  <p class="card-text" style="font-size: 12px;"><%=e.rubro%> | <%=e.linea%> | <%=e.color%> | S/.<%=e.precio%></p>
+
+                
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="/reporte-producto/editar/<%=e.id%>" class="btn btn-success btn-block"><i class="fa fa-edit"></i></a>
+                    </div>
+                    <form action="/reporte-producto/delete/<%=e.id%>" class="col-6" method="post">
+                       <button type="submit" class="btn btn-danger btn-block">
+                         <i class="fa fa-trash"></i>
+                       </button>
+                     </form>
+                  </div>
+                </div>
+              </div>
+          
+          <% }) %>
+        </div>
+          <%}%>
+    
+    
+    
+        
+          
+          <% if(_dataProductos.length == 0){%>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mx-auto">
+                
+                <img src="/images/norfound.png" style="width: 100%;" alt="">
+                <br>
+                <div class="text-center mt-3 mb-3">
+                    <h2><strong> Oops!   </strong></h2>
+                    <h5><strong> Sin registros, pero</strong></h5>
+                    <h6>Ingresa productos   <a href="/agregar-producto" style="background: #ff0b8b;
+                      color: white;
+                      padding: 2px 6px;
+                      font-size: 12px;
+                      border-radius: 5px;">aquí</a></h6>
+                </div>
+                
+            </div>
+            <%}%>
+          
+      
+    
+  </div>
+</div>
+
+<%- include ('_codigoPedazos/finalDashboard.ejs') -%> <%- include
+('_codigoPedazos/jsPaginas.ejs') -%> <%- include
+('_codigoPedazos/cierraHtml.ejs') -%>

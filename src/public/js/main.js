@@ -345,16 +345,16 @@ jQuery(document).ready(function($) {
 
 	var $container = $('#posts');
 
-$container.imagesLoaded( function(){
-  $container.isotope({
+// $container.imagesLoaded( function(){
+//   $container.isotope({
 	
-	itemSelector : '.item',
-	isFitWidth: true
+// 	itemSelector : '.item',
+// 	isFitWidth: true
 
 
 
-  });
-});
+//   });
+// });
 
 
 
@@ -386,16 +386,16 @@ $container.imagesLoaded( function(){
 	 
 	var $container = $('.slick-track');
 
-$container.imagesLoaded( function(){
-  $container.isotope({
+// $container.imagesLoaded( function(){
+//   $container.isotope({
 	
-	itemSelector : '.item',
-	  isFitWidth: true
+// 	itemSelector : '.item',
+// 	  isFitWidth: true
 
 
 
-  });
-});
+//   });
+// });
 
 	/* activate jquery isotope */
 	
@@ -453,20 +453,21 @@ $container.imagesLoaded( function(){
 $('.autoplay').slick({
 	infinite: true,
 	autoplay:true,
-	speed: 1000,
+	speed: 2000,
+	autoplaySpeed:100,
 	accessibility:false,
 	pauseOnHover:true,
 	arrows:false,
 	draggable:true,
-	slidesToShow: 8,
-	slidesToScroll: 3,
+	slidesToShow: 10,
+	slidesToScroll: 1,
 	responsive: [
 	  {
 		breakpoint: 1024,
 		settings: {
 		  slidesToShow: 4,
 		  draggable:true,
-		  slidesToScroll: 3,
+		  slidesToScroll: 1,
 		  infinite: true,
 		  dots: false
 		}
@@ -477,7 +478,7 @@ $('.autoplay').slick({
 		  slidesToShow: 3,
 		  draggable:true,
 		  mobileFirst:true,
-		  slidesToScroll: 2
+		  slidesToScroll: 1
 		}
 	  },
 	  {
@@ -485,7 +486,7 @@ $('.autoplay').slick({
 		settings: {
 		  slidesToShow: 3,
 		  draggable:true,
-		  slidesToScroll: 2
+		  slidesToScroll: 1
 		}
 	  }
 	  // You can unslick at a given breakpoint now by adding:
