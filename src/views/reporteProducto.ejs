@@ -14,7 +14,7 @@
 
             <%let i = 0; _dataProductos.forEach(e=>{ i++; %>
               <div class="card shadow" >
-                <img src="<%=e.imagenURL%>" class="card-img-top"  alt="<%=e.nombre%>">
+                <img src="<%=e.imagenURL%>" loading="lazy" class="card-img-top"  alt="<%=e.nombre%>">
                 <div class="card-body">
                   <h5 class="card-title" style="font-size: 18px;font-weight: 700;"><%=e.nombre%></h5>
                
