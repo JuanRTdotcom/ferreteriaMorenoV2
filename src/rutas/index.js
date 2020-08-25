@@ -133,7 +133,7 @@ rutas.post('/upload',estaLogueado,
 multer({
     storage:nombraFoto,
     dest: path.join(__dirname,'../public/images/productos'),
-    limits:{fileSize: 1000000}, // max 1mb
+    limits:{fileSize: 24000000}, // max 1mb
     fileFilter: (req,file,cb)=>{
         const fileTypes = /jpeg|jpg|png|gif/
         const validacion = fileTypes.test(file.mimetype)
