@@ -126,92 +126,92 @@ var dataVendedores=[
 // var a =document.getElementById('aquivendedores')
 // a.innerHTML=s
 
-function Vendedores(datausar, t) {
+// function Vendedores(datausar, t) {
 
 
-   const lugarvendedores = document.getElementById('aquivendedores2')
-   const hijosbutones = document.getElementById('aquivendedores2').getElementsByTagName('button')
+//    const lugarvendedores = document.getElementById('aquivendedores2')
+//    const hijosbutones = document.getElementById('aquivendedores2').getElementsByTagName('button')
 
-   document.querySelectorAll('aquivendedores2 button').forEach(e => e.animation = "apa 3s ease-in-out")
+//    document.querySelectorAll('aquivendedores2 button').forEach(e => e.animation = "apa 3s ease-in-out")
 
-   ////////////creaciones////////////////
-   var contienevendedor = document.createElement('a')
-   contienevendedor.setAttribute("class", "item " + datausar[t].zona + " apareciendo col-sm-6 col-md-6 col-lg-4 col-xl-3 ")
-   contienevendedor.setAttribute("style", "width:278px")
-       //contienevendedor.setAttribute("href",dataVendedores[t].foto)
-       //contienevendedor.setAttribute("data-fancybox",dataVendedores[t].zona)
-   contienevendedor.setAttribute("data-caption", `<h5>` + datausar[t].zona + `</h5>
-           <h4>` + datausar[t].nombre + `</h4>
-            <span class="position">` + datausar[t].rubro + ` - ` + datausar[t].telefono + `</span>`)
+//    ////////////creaciones////////////////
+//    var contienevendedor = document.createElement('a')
+//    contienevendedor.setAttribute("class", "item " + datausar[t].zona + " apareciendo col-sm-6 col-md-6 col-lg-4 col-xl-3 ")
+//    contienevendedor.setAttribute("style", "width:278px")
+//        //contienevendedor.setAttribute("href",dataVendedores[t].foto)
+//        //contienevendedor.setAttribute("data-fancybox",dataVendedores[t].zona)
+//    contienevendedor.setAttribute("data-caption", `<h5>` + datausar[t].zona + `</h5>
+//            <h4>` + datausar[t].nombre + `</h4>
+//             <span class="position">` + datausar[t].rubro + ` - ` + datausar[t].telefono + `</span>`)
 
-   var contienevendedo = document.createElement('div')
-   contienevendedo.setAttribute("class", "team-member")
-   var contienevende1 = document.createElement('figure')
-//    if(datausar[t].zona == "La_Libertad") {
-//        contienevende1.innerHTML = la_libertad ////
-//    } else if(datausar[t].zona == "Ancash") {
-//        contienevende1.innerHTML = ancash ////
-//    } else if(datausar[t].zona == "Lambayeque") {
-//        contienevende1.innerHTML = lambayeque ////
-//    } else if(datausar[t].zona == "Piura") {
-//        contienevende1.innerHTML = piura ////
-//    } else if(datausar[t].zona == "Tumbes") {
-//        contienevende1.innerHTML = tumbes ////
-//    } else if(datausar[t].zona == "Cajamarca") {
-//        contienevende1.innerHTML = cajamarca ////
-//    } else if(datausar[t].zona == "Amazonas") {
-//        contienevende1.innerHTML = amazonas ////
-//    } else if(datausar[t].zona == "San_Martín") {
-//        contienevende1.innerHTML = san_martin ////
+//    var contienevendedo = document.createElement('div')
+//    contienevendedo.setAttribute("class", "team-member")
+//    var contienevende1 = document.createElement('figure')
+// //    if(datausar[t].zona == "La_Libertad") {
+// //        contienevende1.innerHTML = la_libertad ////
+// //    } else if(datausar[t].zona == "Ancash") {
+// //        contienevende1.innerHTML = ancash ////
+// //    } else if(datausar[t].zona == "Lambayeque") {
+// //        contienevende1.innerHTML = lambayeque ////
+// //    } else if(datausar[t].zona == "Piura") {
+// //        contienevende1.innerHTML = piura ////
+// //    } else if(datausar[t].zona == "Tumbes") {
+// //        contienevende1.innerHTML = tumbes ////
+// //    } else if(datausar[t].zona == "Cajamarca") {
+// //        contienevende1.innerHTML = cajamarca ////
+// //    } else if(datausar[t].zona == "Amazonas") {
+// //        contienevende1.innerHTML = amazonas ////
+// //    } else if(datausar[t].zona == "San_Martín") {
+// //        contienevende1.innerHTML = san_martin ////
+// //    }
+
+//    var contienevende = document.createElement('img')
+//    contienevende.setAttribute("src", datausar[t].foto) ////
+//    contienevende.setAttribute("alt", "Image")
+//    contienevende.setAttribute("class", "img-fluid")
+
+// //    var contienevende2 = document.createElement('div')
+// //    contienevende2.setAttribute("class", "p-3")
+// //    var contieneven21 = document.createElement('h3')
+// //    contieneven21.textContent = datausar[t].nombre ////
+// //    var contieneven22 = document.createElement('span')
+// //    contieneven22.setAttribute("class", "position")
+// //    contieneven22.textContent = datausar[t].rubro + " - " + datausar[t].telefono ////
+
+// //    contienevende2.appendChild(contieneven21)
+// //    contienevende2.appendChild(contieneven22)
+//    contienevende1.appendChild(contienevende)
+//    contienevendedo.appendChild(contienevende1)
+// //    contienevendedo.appendChild(contienevende2)
+//    contienevendedor.appendChild(contienevendedo)
+//    lugarvendedores.appendChild(contienevendedor)
+// }
+
+
+
+
+// function llenar(datausar) {
+//    $("#aquivendedores2").empty();
+//    $("#aquivendedores2").removeClass("slick-initialized slick-slider")
+//    for(var t = 0; t < datausar.length; t++) {
+//        Vendedores(datausar, t)
+
 //    }
 
-   var contienevende = document.createElement('img')
-   contienevende.setAttribute("src", datausar[t].foto) ////
-   contienevende.setAttribute("alt", "Image")
-   contienevende.setAttribute("class", "img-fluid")
-
-//    var contienevende2 = document.createElement('div')
-//    contienevende2.setAttribute("class", "p-3")
-//    var contieneven21 = document.createElement('h3')
-//    contieneven21.textContent = datausar[t].nombre ////
-//    var contieneven22 = document.createElement('span')
-//    contieneven22.setAttribute("class", "position")
-//    contieneven22.textContent = datausar[t].rubro + " - " + datausar[t].telefono ////
-
-//    contienevende2.appendChild(contieneven21)
-//    contienevende2.appendChild(contieneven22)
-   contienevende1.appendChild(contienevende)
-   contienevendedo.appendChild(contienevende1)
-//    contienevendedo.appendChild(contienevende2)
-   contienevendedor.appendChild(contienevendedo)
-   lugarvendedores.appendChild(contienevendedor)
-}
 
 
+// }
+// llenar(dataVendedores)
 
 
-function llenar(datausar) {
-   $("#aquivendedores2").empty();
-   $("#aquivendedores2").removeClass("slick-initialized slick-slider")
-   for(var t = 0; t < datausar.length; t++) {
-       Vendedores(datausar, t)
+// function filtrosede(a) {
+//    if(a.id == "todo") {
+//        llenar(dataVendedores)
+//    } else {
+//        var datausar = dataVendedores.filter(dataVendedores => dataVendedores.zona == a.id);
 
-   }
-
-
-
-}
-llenar(dataVendedores)
-
-
-function filtrosede(a) {
-   if(a.id == "todo") {
-       llenar(dataVendedores)
-   } else {
-       var datausar = dataVendedores.filter(dataVendedores => dataVendedores.zona == a.id);
-
-       llenar(datausar)
-   }
+//        llenar(datausar)
+//    }
 //    $('.autoplay').slick({ 
 //     infinite: true,
 //     slidesToShow: 2,
