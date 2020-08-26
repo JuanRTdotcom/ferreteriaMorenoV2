@@ -253,7 +253,6 @@ var dataVendedores=[
 //            // instead of a settings object
 //        ]
 //    });
-   $('.filtrosH ').removeClass('active');
-   var elementos = document.getElementById(a.id)
-   elementos.classList.add("active")
-}
+   // $('.filtrosH ').removeClass('active');
+   // var elementos = document.getElementById(a.id)
+   // elementos.classList.add("active")
