@@ -117,7 +117,7 @@ body:after {
 
 .site-footer {
   padding: 4em 0 0;
-  background:url('../images/footer.jpg')center;
+  background:url(https://res.cloudinary.com/jrdotcom/image/upload/v1598492420/index/footer_bzfh3v.jpg)center;
   background-size: cover; 
 }
   @media (min-width: 768px) {
@@ -2061,7 +2061,7 @@ figure figcaption {
   font-size: 8pt;
 }
 .catalogoa{
-  background: url(../images/catalogo.jpg);
+  background: url(https://res.cloudinary.com/jrdotcom/image/upload/v1598492421/index/catalogo_ccsmxd.jpg);
   /* Set a specific height */
   min-height: 400px; 
 max-height: 500px;
