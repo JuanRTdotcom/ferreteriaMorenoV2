@@ -116,13 +116,14 @@ body:after {
       font-size: 3rem; } }
 
 .site-footer {
-  padding: 4em 0;
+  padding: 4em 0 0;
   background:url('../images/footer.jpg')center;
   background-size: cover; 
 }
   @media (min-width: 768px) {
+    
     .site-footer {
-      padding: 8em 0 0; } }
+      padding: 4em 0 0; } }
   .site-footer .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
   .site-footer p {
@@ -2123,6 +2124,7 @@ max-height: 500px;
   transition: .3s;
 }
 @media (max-width: 540px) {
+  
   .tituloinicialh{
     font-size: 2em ;
   }
@@ -2132,6 +2134,7 @@ max-height: 500px;
 }
 
 @media (max-width: 700px) {
+ 
   .tituloinicialh{
     font-size: 3em ;
   }
@@ -2139,6 +2142,7 @@ max-height: 500px;
     font-size: 1rem;
 }
 }
+
 
 
 
