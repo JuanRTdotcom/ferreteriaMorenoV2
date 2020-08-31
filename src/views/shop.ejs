@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Catálogo | Ferretería Moreno</title>
+    <link rel="icon" type="image/png" href="/images/paraicono.ico" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+
+    <link rel="stylesheet" href="/css/cssshop.css" type="text/css">
+    <link rel="stylesheet" href="/css/auto-complete.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <!-- <div id="preloder">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="#" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">item: <span>$150.00</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="#" alt="">
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./tienda.html">Shop</a></li>
+                <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contacto.html">contacto</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contacto">
+            <ul>
+                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                <li>Free Shipping for all Order of $99</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="breadcrumb-section set-bg" style="background:url(https://res.cloudinary.com/jrdotcom/image/upload/v1598658945/index/shop_nakxhp.jpg) center;background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2 class="tituloGrande"> Catálogo Online</h2>
+                        <div class="breadcrumb__option">
+                            <a class="tituloGrande" href="/" style="text-decoration: underline;">Inicio</a>
+                            <span class="tituloGrande">Catálogo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <a class="_comunicaWhatsapp shadow" href="https://api.whatsapp.com/send?phone=51980497850&text=Hola!&nbsp;Ayudamee!" target="_blank">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <!-- Product Section Begin -->
+    <section class="product spad"  style="background: #F3F3F3;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3">
+                    <div class="sidebar">
+                        <div class="sidebar__item">
+                            <form action=""  id="buscarConsulta">
+                                 <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="clienteVentas" autocomplete="off" onkeyup="leerDat()" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append" style="position: absolute;
+                                    right: 0;
+                                    z-index: 999;
+                                    top: 18%;">
+                                      <button type="submit" class="input-group-text" id="basic-addon2" style="background: #f3f3f300;
+                                      border: 0;
+                                      border-radius: 0;
+                                      border-top-right-radius: 2px;
+                                      border-bottom-right-radius: 2px;;"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <div class="sidebar__item" style="padding: 0 0 35px 0;
+                        border-bottom: 1px #8e8e8e solid;">
+                            <a style="font-size: 24px;font-weight: 300;color:gray">Filtros <span style="float:right"> <a href="/catalogo-online" style="float:right;font-size: 24px;color:#EA593F"><i class="fa fa-refresh"></i></a></span> </a>
+                        </div>
+                        <div class="sidebar__item">
+                            <a data-toggle="collapse" class="subTitulo" style="color: #EA593F;font-weight: 300;text-transform: uppercase;letter-spacing: 1.6px;" href="#_setHeading" aria-expanded="true">Rubro <span style="float:right;color:#EA593F"><i class="fa fa-chevron-down"></i></span> </a>
+                            <ul id="_setHeading" class="collapse show">
+                                
+
+                            </ul>
+                        </div>
+                        <div class="sidebar__item">
+                            <a data-toggle="collapse" class="subTitulo" style="color: #EA593F;font-weight: 300;text-transform: uppercase;letter-spacing: 1.6px;" href="#_setBrands" aria-expanded="true">Marca <span style="float:right;color:#EA593F"><i class="fa fa-chevron-down"></i></span></a>
+                            <ul id="_setBrands"  class="collapse show" >
+                                
+
+                            </ul>
+                        </div>
+                        <div class="sidebar__item sidebar__item__color--option d-flex flex-column" >
+                            <a data-toggle="collapse" class="subTitulo" style="color: #EA593F;font-weight: 300;text-transform: uppercase;letter-spacing: 1.6px;" href="#_setColours" aria-expanded="true">Colores <span style="float:right;color:#EA593F"><i class="fa fa-chevron-down"></i></span></a>
+                            
+                            <ul id="_setColours"  class="collapse show" >
+                                
+
+                            </ul>
+                        </div>
+                        <!-- <div class="sidebar__item">
+                            <h4>Price</h4>
+                            <div class="price-range-wrap">
+                                <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                    data-min="10" data-max="540">
+                                    <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                    <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                </div>
+                                <div class="range-slider">
+                                    <div class="price-input">
+                                        <input type="text" id="minamount">
+                                        <input type="text" id="maxamount">
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-9">
+
+                    <div class="filter__item">
+                        <div class="row" style="justify-content: space-between;">
+                           
+                            <div class="col-lg-4 col-md-4 " style="    font-size: 12px;
+                            font-weight: 600;
+                            display: flex;
+                            height: 43px;
+                            align-items: center;">
+                                Encontrados <span id="elementosencontrados"></span> productos
+                                
+                            </div>
+                            <div class="col-lg-4 col-md-5">
+                                <div class="filter__sort text-right">
+                                    <span style="font-size: 12px;font-weight: 600;">Ordenar por </span>
+                                    <select onchange="setOrden()" id="orderpor">
+                                        <option disabled selected>Recomendado</option>
+                                        <option value="mayor" style="cursor: pointer;">Mayor Precio</option>
+                                        <option value="menor" style="cursor: pointer;">Menor Precio</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="_setProductos" style="padding:0 15px">
+
+                       
+
+                    </div>
+                    <div class="product__pagination">
+                        <ul id="pagination-demo" class="pagination" style="display: flex;justify-content: center;margin-top:30px"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="site-footer " style="padding: 0 !important; background: rgb(22, 22, 22) !important;"  id="contact-section" >
+        <div class="container">
+
+
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div >
+                        <p class="fin" style="margin-bottom: 0px !important;">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy; by<a href="https://cv-juan.web.app/" target="_blank" class="rojito"> JRdotcom</a>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+</footer>
+
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.twbsPagination.js"></script>
+    <script src="/js/auto-complete.min.js"></script>
+    <script src="/js/shop.js"></script>
+    <!-- <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script> -->
+
+
+
+</body>
+
+</html>

@@ -2657,3 +2657,132 @@ form .text-black{
   background: rgba(0, 0, 0, 0);
   color: white;
 }
+
+
+
+
+
+#clienteVentas{
+  width: 150px;
+  /* max-width: 200px; */
+  transition: .3s;
+}
+#clienteVentas:focus{
+  
+    background: #ffffff;
+    border-bottom: 1px rgb(255, 255, 255) solid;
+}
+#clienteVentas:focus #basic-addon2{
+  
+  background: #ffffff;
+}
+._productos:hover{
+  transform: scale(.9);
+}
+
+.sidebar li{
+  transition: .3s;
+}
+.sidebar li:hover{
+  transform: translateX(4px);
+}
+
+
+
+#pagination-demo li a{
+  padding: 1px;
+  border-radius: 8px;
+  border:0px red solid;
+  background: rgba(0, 0, 0, 0);
+  color:rgb(87, 87, 87);
+}
+
+#pagination-demo li a:hover{
+  color:white;
+  background: #E31732;
+}
+
+#pagination-demo li {
+  background: rgb(218, 218, 218);
+}
+
+#pagination-demo .active a{
+  background: #E31732 !important;
+  color: white !important;
+  box-shadow: 0px 0px 4px #E31732;
+}
+#pagination-demo li:first-child,#pagination-demo li:nth-child(2),#pagination-demo li:nth-last-child(-n+2){
+  border-radius: 50%;
+}
+
+#pagination-demo li:nth-child(3){ 
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  overflow: hidden;
+  margin-left: 5px;
+}
+#pagination-demo li:nth-last-child(-n+3){
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+  margin-right: 5px;
+}
+#pagination-demo li:first-child{
+  margin-right: 5px;
+  overflow: hidden;
+}
+#pagination-demo li:nth-child(2){
+  overflow: hidden;
+}
+#pagination-demo .disabled{
+  cursor:no-drop;
+}
+
+
+
+#orderpor{
+  padding: 10px 70px 10px 10px;
+    border-top: 0px;
+    text-align: left;
+    border-radius: 2px;
+    font-size: 12px;
+    border-right: 0px;
+    border-left: 0px;
+    cursor: pointer;
+    margin-left: 15px;
+    height: 43px;
+    color: #7b7b7b;
+    background: #ffffff;
+    border-bottom: 1px #c7c7c700 solid;
+}
+
+#clienteVentas{
+  border-radius: 0;
+    font-size: 12px;
+    border: 0;
+    border-top-left-radius: 2px;
+    background: #F3F3F3;
+    border-bottom: 1px rgb(142,142,142) solid;
+}
+
+#elementosencontrados{
+  padding: 6px 8px;
+    background: #ffffff;
+    height: 38px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 4px;
+    border-radius: 2px;
+}
+
+/* .sidebar__item .subTitulo::after{
+  content: '';
+  width: 20px;
+  height: 5px;
+  background: red;
+  
+} */
+
+/* .subTitulo{
+  color: black;font-weight: 900;text-transform: uppercase;letter-spacing: 1.6px;
+} */

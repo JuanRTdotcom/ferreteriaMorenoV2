@@ -37,14 +37,128 @@ rutas.get('/dashboard',estaLogueado,(req,res)=>{
 })
 
 rutas.get('/login',(req,res)=>{
+
     res.render('login')
     
 })
 
-rutas.get('/catalogo-online',(req,res)=>{
-    res.render('login')
+// rutas.get('/catalogo-online/marca/:id', async (req,res)=>{
+//     const _misDatosBDsinFiltro = await nuevoProducto.find()
+   
+//     let _misDatosBD = _misDatosBDsinFiltro.filter(e=>e.linea == req.params.id)
+   
+        
+//     let misRubros = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.rubro 
+//     }) 
+    
+//     let misColores = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.color 
+//     })
+    
+//     let misLineas = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.linea 
+//     }) 
+//     let rubrosUnicos=misRubros.filter(unique);
+//     let coloresUnicos=misColores.filter(unique);
+//     let lineasUnicos=misLineas.filter(unique);
+
+//     res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
+    
+// })
+
+
+// rutas.get('/catalogo-online/color/:id', async (req,res)=>{
+//     const _misDatosBDsinFiltro = await nuevoProducto.find()
+   
+//     let _misDatosBD = _misDatosBDsinFiltro.filter(e=>e.color == req.params.id)
+   
+        
+//     let misRubros = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.rubro 
+//     }) 
+    
+//     let misColores = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.color 
+//     })
+    
+//     let misLineas = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.linea 
+//     }) 
+//     let rubrosUnicos=misRubros.filter(unique);
+//     let coloresUnicos=misColores.filter(unique);
+//     let lineasUnicos=misLineas.filter(unique);
+
+//     res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
+    
+// })
+
+
+
+rutas.get('/catalogo-online', async (req,res)=>{
+    const _misDatosBD = await nuevoProducto.find({},{"rubro":1,"color":1,"linea":1,"precio":1,"nombre":1,"imagenURL":1,"_id":0})
+  
+    let misRubros = _misDatosBD.map(e=>{ 
+        return e.rubro 
+    }) 
+    
+    let misColores = _misDatosBD.map(e=>{ 
+        return e.color 
+    })
+    
+    let misLineas = _misDatosBD.map(e=>{ 
+        return e.linea 
+    }) 
+    let rubrosUnicos=misRubros.filter(unique);
+    let coloresUnicos=misColores.filter(unique);
+    let lineasUnicos=misLineas.filter(unique);
+    res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
     
 })
+
+rutas.get('/catalogo-online/getData', async (req,res)=>{
+    const _misDatosBD = await nuevoProducto.find({},{"rubro":1,"color":1,"linea":1,"precio":1,"nombre":1,"imagenURL":1,"_id":0})
+    let misRubros = _misDatosBD.map(e=>{ 
+        return e.rubro 
+    }) 
+    
+    let misColores = _misDatosBD.map(e=>{ 
+        return e.color 
+    })
+    
+    let misLineas = _misDatosBD.map(e=>{ 
+        return e.linea 
+    }) 
+    let rubrosUnicos=misRubros.filter(unique);
+    let coloresUnicos=misColores.filter(unique);
+    let lineasUnicos=misLineas.filter(unique);
+    res.send({_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
+})
+
+// rutas.get('/catalogo-online/rubro/:id', async (req,res)=>{
+//     const _misDatosBDsinFiltro = await nuevoProducto.find()
+   
+//     let _misDatosBD = _misDatosBDsinFiltro.filter(e=>e.rubro == req.params.id)
+   
+        
+//     let misRubros = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.rubro 
+//     }) 
+    
+//     let misColores = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.color 
+//     })
+    
+//     let misLineas = _misDatosBDsinFiltro.map(e=>{ 
+//         return e.linea 
+//     }) 
+//     let rubrosUnicos=misRubros.filter(unique);
+//     let coloresUnicos=misColores.filter(unique);
+//     let lineasUnicos=misLineas.filter(unique);
+
+//     res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
+    
+// })
 
 rutas.post('/login',passport.authenticate('local',{
     successRedirect:'/dashboard',
@@ -67,6 +181,10 @@ rutas.get('/agregar-producto',estaLogueado,(req,res)=>{
     
 })
 
+const unique = (value, index, self) => {
+    return self.indexOf(value) === index
+  }
+
 function estaLogueado(req , res , next ) {
     if(req.isAuthenticated()){
         return next()
@@ -74,6 +192,19 @@ function estaLogueado(req , res , next ) {
     req.flash('error','Iniciar Sesión')
     return res.redirect('/login')
 }
+
+
+rutas.post('/reporte-producto/buscar',estaLogueado,async (req,res)=>{
+    const _dataProductosTotal = await nuevoProducto.find()
+    const{dato} = req.body
+    let _dataProductos = _dataProductosTotal.filter(e=>(e.nombre.toLowerCase()).includes(dato.toLowerCase()))
+    if(dato.trim()==''){ 
+        _dataProductos=_dataProductosTotal
+    }
+    res.render('reporteProducto',{_dataProductos})
+    
+})
+
 
 rutas.get('/reporte-producto',estaLogueado,async (req,res)=>{
     const _dataProductos = await nuevoProducto.find()
@@ -86,6 +217,8 @@ rutas.get('/reporte-producto/editar/:id',estaLogueado,async (req,res)=>{
     res.render('editarProducto',{productoEditar})
     
 })
+
+
 
 rutas.put('/reporte-producto/editarproducto/:id',estaLogueado,
 
@@ -201,6 +334,20 @@ multer({
     }
     // console.log(req.file) // datos de imagen
     
+})
+
+
+
+
+
+
+
+
+
+///////////////////////////////////// metadata ////////////////////
+rutas.get('/metadata/rubros',estaLogueado, (req,res)=>{
+    res.render('rubros')
+
 })
 
 // rutas.get("/reporte-producto/")

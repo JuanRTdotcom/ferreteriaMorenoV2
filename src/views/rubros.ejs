@@ -1,0 +1,85 @@
+<%- include ('_codigoPedazos/inicioDashboard.ejs') -%>
+
+<%- include ('_codigoPedazos/alertasMensaje.ejs') -%>
+<div class="container-fluid" id="_contenidoCambiante">
+  <div class="col-12">
+    <div class="card shadow">
+      <div
+        class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+      >
+        <h6 class="m-0 font-weight-bold text-primary">
+          <i class="fas fa-fw fa-plus-circle"></i> Agregar Rubros
+        </h6>
+      </div>
+      <div class="card-body">
+        
+          <div class="row">
+            <form action="/upload" class="col-6" method="post" enctype="multipart/form-data">
+            <div class="col-12 ">
+              <div class="input-group mb-3 col-12">
+                <div class="input-group-prepend" style="width: 42px;">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-cube"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  autofocus
+                  required
+                  autocomplete="off"
+                  name="nombre"
+                  placeholder="Nombre del rubro"
+                  aria-label="nombre"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+              <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
+                <div class="input-group-prepend" style="width: 42px;">
+                  <label class="input-group-text" for="">
+                    <i class="fa fa-archive"></i>
+                  </label>
+                </div>
+                <select class="custom-select" name="rubro" id="" required>
+                  <option value="" selected disabled>Selec. estado...</option>
+                  <option value="Activo">Activo</option>
+                  <option value="Inactivo">Inactivo</option>
+                  
+                </select>
+              </div>
+              
+              <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
+                <button type="sumbit" class="btn btn-primary col-12">
+                  Registrar
+                </button>
+              </div>
+            </div>
+        </form>
+            <div class="col-6">
+              <table class="table">
+                  <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Rubro</th>
+                        <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+              </table>
+            </div>
+          </div>
+
+          
+       
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<%- include ('_codigoPedazos/finalDashboard.ejs') -%> <%- include
+('_codigoPedazos/jsPaginas.ejs') -%>
+
+<%- include ('_codigoPedazos/cierraHtml.ejs') -%>
