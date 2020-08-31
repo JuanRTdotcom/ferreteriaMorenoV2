@@ -1052,15 +1052,16 @@ ol {
 }
 
 .breadcrumb__option a {
-	display: inline-block;
-	font-size: 16px;
+	/* display: inline-block;	 */
+	font-size: 14px;
 	color: #ffffff;
-	font-weight: 700;
-	margin-right: 20px;
+	letter-spacing: normal;
+	font-weight: 400;
+	/* margin-right: 20px; */
 	position: relative;
 }
 
-.breadcrumb__option a:after {
+/* .breadcrumb__option a:after {
 	position: absolute;
 	right: -12px;
 	top: 13px;
@@ -1068,7 +1069,7 @@ ol {
 	width: 10px;
 	background: #ffffff;
 	content: "";
-}
+} */
 
 .breadcrumb__option span {
 	display: inline-block;

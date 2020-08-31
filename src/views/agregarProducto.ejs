@@ -153,9 +153,11 @@
                 </div>
                 <select class="custom-select" name="rubro" id="" required>
                   <option value="" selected disabled>Selec. rubro...</option>
-                  <option value="Pesca">Pesca</option>
-                  <option value="Limpieza">Limpieza</option>
-                  <option value="Seguridad">Seguridad</option>
+                  <%if(_dataRubro.length >0 ){%>
+                    <% _dataRubro.forEach(e=>{%>
+                      <option value="<%=e.nombre%>"><%=e.nombre%></option>
+                    <%})%>
+                  <%}%>
                 </select>
               </div>
               <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
@@ -166,9 +168,11 @@
                 </div>
                 <select class="custom-select" name="linea" id="" required>
                   <option value="" selected disabled>Selec. línea...</option>
-                  <option value="Dewall">Dewall</option>
-                  <option value="Norton">Norton</option>
-                  <option value="Schnider">Schnider</option>
+                  <%if(_dataLinea.length >0 ){%>
+                    <% _dataLinea.forEach(e=>{%>
+                      <option value="<%=e.nombre%>"><%=e.nombre%></option>
+                    <%})%>
+                  <%}%>
                 </select>
               </div>
               <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
@@ -179,9 +183,11 @@
                 </div>
                 <select class="custom-select" name="color" id="" required>
                   <option value="" selected disabled>Selec. color...</option>
-                  <option value="Rojo">Rojo</option>
-                  <option value="Amarillo">Amarillo</option>
-                  <option value="Verde">Verde</option>
+                  <%if(_dataColor.length >0 ){%>
+                    <% _dataColor.forEach(e=>{%>
+                      <option value="<%=e.nombre%>"><%=e.nombre%></option>
+                    <%})%>
+                  <%}%>
                 </select>
               </div>
               <div class="input-group mb-3 col-lg-12 col-12 col-md-12">

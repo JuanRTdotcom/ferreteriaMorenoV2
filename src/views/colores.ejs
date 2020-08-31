@@ -8,13 +8,13 @@
         class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
       >
         <h6 class="m-0 font-weight-bold text-primary">
-          <i class="fas fa-fw fa-plus-circle"></i> Agregar Rubros
+          <i class="fas fa-fw fa-plus-circle"></i> Agregar Colores
         </h6>
       </div>
       <div class="card-body">
         
           <div class="row">
-        <form action="/registrar-rubros" class="col-6" method="post" enctype="application/x-www-form-urlencoded">
+        <form action="/registrar-colores" class="col-6" method="post" enctype="application/x-www-form-urlencoded">
             <div class="col-12 ">
               <div class="input-group mb-3 col-12">
                 <div class="input-group-prepend" style="width: 42px;">
@@ -32,6 +32,24 @@
                   placeholder="Nombre del rubro"
                   aria-label="nombre"
                   aria-describedby="basic-addon1"
+                />
+              </div>
+              <div class="input-group mb-3 col-12">
+                <div class="input-group-prepend" style="width: 42px;">
+                  <span class="input-group-text" id="basic-addon2">
+                    <i class="fa fa-paint-brush"></i>
+                  </span>
+                </div>
+                <input
+                  type="color"
+                  class="form-control"
+                  autofocus
+                  required
+                  autocomplete="off"
+                  name="color"
+                  placeholder="Nombre del rubro"
+                  aria-label="nombre"
+                  aria-describedby="basic-addon2"
                 />
               </div>
               <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
@@ -60,16 +78,18 @@
                   <thead>
                     <tr>
                         <th>#</th>
-                        <th>Rubro</th>
+                        <th>Nombre</th>
+                        <th>Color</th>
                         <th class="text-center">Estado</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <%if (_dataRubros.length > 0){%>
-                        <% let i = 1;_dataRubros.forEach(e=>{%>
+                    <%if (_dataColores.length > 0){%>
+                        <% let i = 1;_dataColores.forEach(e=>{%>
                             <tr>
                                 <td><%= i%></td>
                                 <td><%=e.nombre%></td>
+                                <td><div style="border-radius: 5px;width: 50px;height: 10px;background:<%= e.color %>"></div></td>
                                 <%if(e.estado == 'Activo'){%>
                                     <td class="text-center"><i style="color:#269E41" class="fa fa-check"></i></td>
                                     <%} else{%>

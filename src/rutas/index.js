@@ -14,6 +14,9 @@ let express = require('express')
 let rutas = express.Router()
 const nuevoProducto = require('../models/newProducto')
 const usuario = require('../models/usuario')
+const rubro = require('../models/rubro')
+const linea = require('../models/linea')
+const nuevoColor = require('../models/color')
 const cloudinary = require('cloudinary')
 cloudinary.config({
     cloud_name : process.env.CLD_nombre,
@@ -42,82 +45,15 @@ rutas.get('/login',(req,res)=>{
     
 })
 
-// rutas.get('/catalogo-online/marca/:id', async (req,res)=>{
-//     const _misDatosBDsinFiltro = await nuevoProducto.find()
-   
-//     let _misDatosBD = _misDatosBDsinFiltro.filter(e=>e.linea == req.params.id)
-   
-        
-//     let misRubros = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.rubro 
-//     }) 
-    
-//     let misColores = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.color 
-//     })
-    
-//     let misLineas = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.linea 
-//     }) 
-//     let rubrosUnicos=misRubros.filter(unique);
-//     let coloresUnicos=misColores.filter(unique);
-//     let lineasUnicos=misLineas.filter(unique);
-
-//     res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
-    
-// })
-
-
-// rutas.get('/catalogo-online/color/:id', async (req,res)=>{
-//     const _misDatosBDsinFiltro = await nuevoProducto.find()
-   
-//     let _misDatosBD = _misDatosBDsinFiltro.filter(e=>e.color == req.params.id)
-   
-        
-//     let misRubros = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.rubro 
-//     }) 
-    
-//     let misColores = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.color 
-//     })
-    
-//     let misLineas = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.linea 
-//     }) 
-//     let rubrosUnicos=misRubros.filter(unique);
-//     let coloresUnicos=misColores.filter(unique);
-//     let lineasUnicos=misLineas.filter(unique);
-
-//     res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
-    
-// })
-
-
-
 rutas.get('/catalogo-online', async (req,res)=>{
-    const _misDatosBD = await nuevoProducto.find({},{"rubro":1,"color":1,"linea":1,"precio":1,"nombre":1,"imagenURL":1,"_id":0})
-  
-    let misRubros = _misDatosBD.map(e=>{ 
-        return e.rubro 
-    }) 
     
-    let misColores = _misDatosBD.map(e=>{ 
-        return e.color 
-    })
-    
-    let misLineas = _misDatosBD.map(e=>{ 
-        return e.linea 
-    }) 
-    let rubrosUnicos=misRubros.filter(unique);
-    let coloresUnicos=misColores.filter(unique);
-    let lineasUnicos=misLineas.filter(unique);
-    res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
+    res.render('shop')
     
 })
 
 rutas.get('/catalogo-online/getData', async (req,res)=>{
     const _misDatosBD = await nuevoProducto.find({},{"rubro":1,"color":1,"linea":1,"precio":1,"nombre":1,"imagenURL":1,"_id":0})
+    const _datosColores = await nuevoColor.find()
     let misRubros = _misDatosBD.map(e=>{ 
         return e.rubro 
     }) 
@@ -132,33 +68,19 @@ rutas.get('/catalogo-online/getData', async (req,res)=>{
     let rubrosUnicos=misRubros.filter(unique);
     let coloresUnicos=misColores.filter(unique);
     let lineasUnicos=misLineas.filter(unique);
-    res.send({_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
+
+    let codigoColores = []
+    coloresUnicos.forEach(e=>{
+        _datosColores.forEach(x=>{
+            if(x.nombre == e){
+                codigoColores.push(x.color)
+            }
+        })
+    })
+    console.log(coloresUnicos)
+    console.log(codigoColores)
+    res.send({_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos,codigoColores})
 })
-
-// rutas.get('/catalogo-online/rubro/:id', async (req,res)=>{
-//     const _misDatosBDsinFiltro = await nuevoProducto.find()
-   
-//     let _misDatosBD = _misDatosBDsinFiltro.filter(e=>e.rubro == req.params.id)
-   
-        
-//     let misRubros = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.rubro 
-//     }) 
-    
-//     let misColores = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.color 
-//     })
-    
-//     let misLineas = _misDatosBDsinFiltro.map(e=>{ 
-//         return e.linea 
-//     }) 
-//     let rubrosUnicos=misRubros.filter(unique);
-//     let coloresUnicos=misColores.filter(unique);
-//     let lineasUnicos=misLineas.filter(unique);
-
-//     res.render('shop',{_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos})
-    
-// })
 
 rutas.post('/login',passport.authenticate('local',{
     successRedirect:'/dashboard',
@@ -175,9 +97,11 @@ rutas.get('/cerrarsesion',(req,res)=>{
 
 
 
-rutas.get('/agregar-producto',estaLogueado,(req,res)=>{
-    
-    res.render('agregarProducto')
+rutas.get('/agregar-producto',estaLogueado,async(req,res)=>{
+    const _dataRubro = await rubro.find({estado:"Activo"})
+    const _dataLinea = await linea.find({estado:"Activo"})
+    const _dataColor = await nuevoColor.find({estado:"Activo"})
+    res.render('agregarProducto',{_dataRubro,_dataLinea,_dataColor})
     
 })
 
@@ -308,7 +232,7 @@ multer({
     }else{
         // cloudinary.image("woman.jpg", {quality: "auto"})
         
-        console.log(req.file)
+      
 
         let fianal = path.extname(req.file.originalname).toLocaleLowerCase()
         let objetivo = path.join(req.file.destination,'renovado'+fianal)
@@ -328,8 +252,10 @@ multer({
         const miNuevoProducto = new nuevoProducto({nombre,rubro,linea,color,precio,imagenURL:imagenSubida.secure_url,public_id:imagenSubida.public_id})
         await miNuevoProducto.save()
         req.flash('success_msg','Producto Agregado!')
-        await fs.unlink(req.file.path)
+     
         await fs.unlink(objetivo)
+        await fs.unlink(req.file.path)
+        
         res.redirect('/agregar-producto')
     }
     // console.log(req.file) // datos de imagen
@@ -342,14 +268,52 @@ multer({
 
 
 
+rutas.post('/registrar-rubros',estaLogueado,async(req,res)=>{
 
+const {nombre,estado} = req.body
+const miNuevoRubro = new rubro({nombre,estado})
+await miNuevoRubro.save()
+req.flash('success_msg','Rubro Agregado!')
+res.redirect('/metadata/rubros')    
+})
+
+rutas.post('/registrar-lineas',estaLogueado,async(req,res)=>{
+
+    const {nombre,estado} = req.body
+    const miNuevoLinea = new linea({nombre,estado})
+    await miNuevoLinea.save()
+    req.flash('success_msg','Linea Agregada!')
+    res.redirect('/metadata/lineas')    
+})
+
+rutas.post('/registrar-colores',estaLogueado,async(req,res)=>{
+    
+    const {nombre,color,estado} = req.body
+    const miNuevoColor = new nuevoColor({nombre,estado,color})
+    await miNuevoColor.save()
+    req.flash('success_msg','Color Agregado!')
+    res.redirect('/metadata/colores')    
+})
 
 ///////////////////////////////////// metadata ////////////////////
-rutas.get('/metadata/rubros',estaLogueado, (req,res)=>{
-    res.render('rubros')
+rutas.get('/metadata/rubros',estaLogueado, async(req,res)=>{
+    const _dataRubros = await rubro.find()
+    res.render('rubros',{_dataRubros})  
+
+})
+////////////////////////////////////////líneas//////////////////////////
+rutas.get('/metadata/lineas',estaLogueado, async(req,res)=>{
+    const _dataLineas = await linea.find()
+    res.render('lineas',{_dataLineas})  
+
+})
+//////////////////////////////////////////colores////////////////////////////
+
+rutas.get('/metadata/colores',estaLogueado, async(req,res)=>{
+    const _dataColores = await nuevoColor.find()
+    res.render('colores',{_dataColores})  
 
 })
 
-// rutas.get("/reporte-producto/")
 
 module.exports=rutas

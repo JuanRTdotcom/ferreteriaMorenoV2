@@ -8,13 +8,13 @@
         class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
       >
         <h6 class="m-0 font-weight-bold text-primary">
-          <i class="fas fa-fw fa-plus-circle"></i> Agregar Rubros
+          <i class="fas fa-fw fa-plus-circle"></i> Agregar Líneas ( Marcas )
         </h6>
       </div>
       <div class="card-body">
         
           <div class="row">
-        <form action="/registrar-rubros" class="col-6" method="post" enctype="application/x-www-form-urlencoded">
+        <form action="/registrar-lineas" class="col-6" method="post" enctype="application/x-www-form-urlencoded">
             <div class="col-12 ">
               <div class="input-group mb-3 col-12">
                 <div class="input-group-prepend" style="width: 42px;">
@@ -60,13 +60,13 @@
                   <thead>
                     <tr>
                         <th>#</th>
-                        <th>Rubro</th>
+                        <th>Lineas</th>
                         <th class="text-center">Estado</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <%if (_dataRubros.length > 0){%>
-                        <% let i = 1;_dataRubros.forEach(e=>{%>
+                    <%if (_dataLineas.length > 0){%>
+                        <% let i = 1;_dataLineas.forEach(e=>{%>
                             <tr>
                                 <td><%= i%></td>
                                 <td><%=e.nombre%></td>

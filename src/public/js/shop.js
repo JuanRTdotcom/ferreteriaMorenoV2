@@ -16,6 +16,7 @@
                 _colours = JSON.parse(miData).coloresUnicos
                 _headings = JSON.parse(miData).rubrosUnicos
                 _brands = JSON.parse(miData).lineasUnicos
+                _codigoColores = JSON.parse(miData).codigoColores
                 _dataLocal=_database
                 document.getElementById('elementosencontrados').innerHTML = _database.length
                 
@@ -23,28 +24,28 @@
                 let setHeading = document.getElementById('_setHeading')
                 let setBrands = document.getElementById('_setBrands')
                 
-
+                let indicaColores = 0
                 _colours.forEach((e) => {
-                    let cantidad = _database.filter(x=>x.color == e)
-                         let _newelement = document.createElement('li')
-                         _newelement.setAttribute('style','display:flex;justify-content:space-between;padding:10px 0 0;')
+                    
+                         let _newelement = document.createElement('div')
+                         _newelement.setAttribute('style','margin: 0 5px 0 0;')
                          
                          _newelement.innerHTML = `
                          
-                                    <div onclick="filtroColor('${e}')" for="white" style="font-size: 12px;text-decoration: none;cursor: pointer;color:black;">
-                                    <i class="fa fa-circle" style="color:red;"> </i> ${e}
+                                    <div onclick="filtroColor('${e}')" for="white" style="font-size: 18px;text-decoration: none;cursor: pointer;color:black;">
+                                    <i class="fa fa-circle" style="color:${_codigoColores[indicaColores]};"> </i> 
                                     
                                         </div>
-                                    <div style="font-size: 12px">${cantidad.length}</div>
+                                    
                                         `
                         setColours.appendChild(_newelement)
-                        
+                        indicaColores++
                 })
 
                 _headings.forEach((e) => {
                     let cantidad = _database.filter(x=>x.rubro == e)
                     let _newelement = document.createElement('li')
-                    _newelement.setAttribute('style','display:flex;justify-content:space-between;padding:10px 0 0;')
+                    _newelement.setAttribute('style','display:flex;justify-content:space-between;padding:10px 0 0;border-bottom: 1px #e4e4e4cf solid;')
                     _newelement.innerHTML = `
                     <div onclick="filtroRubro('${e}')" style="font-size: 12px;text-decoration: none;cursor: pointer;color:black;">${e}</div>
                     <div style="font-size: 12px">${cantidad.length}</div>
@@ -55,7 +56,7 @@
                 _brands.forEach((e) => {
                     let cantidad = _database.filter(x=>x.linea == e)
                     let _newelement = document.createElement('li')
-                    _newelement.setAttribute('style','display:flex;justify-content:space-between;padding:10px 0 0;')
+                    _newelement.setAttribute('style','display:flex;justify-content:space-between;padding:10px 0 0;border-bottom: 1px #e4e4e4cf solid;')
                     _newelement.innerHTML = `
                     <div onclick="filtroMarca('${e}')" style="font-size: 12px;text-decoration: none;cursor: pointer;color:black;">${e}</div>
                     <div style="font-size: 12px">${cantidad.length}</div>
