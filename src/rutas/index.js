@@ -138,7 +138,11 @@ rutas.get('/reporte-producto',estaLogueado,async (req,res)=>{
 
 rutas.get('/reporte-producto/editar/:id',estaLogueado,async (req,res)=>{
     let productoEditar = await nuevoProducto.findById(req.params.id)
-    res.render('editarProducto',{productoEditar})
+    const _dataRubro = await rubro.find({estado:"Activo"})
+    const _dataLinea = await linea.find({estado:"Activo"})
+    const _dataColor = await nuevoColor.find({estado:"Activo"})
+    
+    res.render('editarProducto',{productoEditar,_dataRubro,_dataLinea,_dataColor})
     
 })
 
