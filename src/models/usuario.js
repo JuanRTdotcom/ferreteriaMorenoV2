@@ -7,7 +7,8 @@ const userSchema = new Schema({
         usuario: {type: String, required: true},
         contrasenia: {type: String, required: true},
         nombre: {type: String, required: true},
-        permiso: {type: String, required: true}
+        permiso: {type: String, required: true},
+        imgPerfil: {type: String, required: true}
     
    
 })

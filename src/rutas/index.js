@@ -316,4 +316,30 @@ rutas.get('/metadata/colores',estaLogueado, async(req,res)=>{
 })
 
 
+////////////////////////////////eliminar rubro///////////////////////
+rutas.get('/metadata/rubros/eliminar/:id',estaLogueado,async (req,res)=>{
+    await rubro.findByIdAndDelete(req.params.id)
+    req.flash('success_msg','Rubro eliminado!')
+    res.redirect('/metadata/rubros')
+    
+})
+
+////////////////////////////////eliminar lineas///////////////////////
+rutas.get('/metadata/lineas/eliminar/:id',estaLogueado,async (req,res)=>{
+    await linea.findByIdAndDelete(req.params.id)
+    req.flash('success_msg','Linea eliminada!')
+    res.redirect('/metadata/lineas')
+    
+})
+
+////////////////////////////////eliminar colores///////////////////////
+rutas.get('/metadata/colores/eliminar/:id',estaLogueado,async (req,res)=>{
+    await nuevoColor.findByIdAndDelete(req.params.id)
+    req.flash('success_msg','Color eliminado!')
+    res.redirect('/metadata/colores')
+    
+})
+
+
+
 module.exports=rutas

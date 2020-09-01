@@ -14,8 +14,8 @@
       <div class="card-body">
         
           <div class="row">
-        <form action="/registrar-colores" class="col-6" method="post" enctype="application/x-www-form-urlencoded">
-            <div class="col-12 ">
+        <form action="/registrar-colores" class="col-12 col-md-6" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="col-12">
               <div class="input-group mb-3 col-12">
                 <div class="input-group-prepend" style="width: 42px;">
                   <span class="input-group-text" id="basic-addon1">
@@ -73,11 +73,12 @@
               </div>
             </div>
         </form>
-            <div class="col-6">
-              <table class="table">
+            <div class="col-12 col-md-6 table-responsive">
+              <table class="table ">
                   <thead>
                     <tr>
                         <th>#</th>
+                        <th>Accion</th>
                         <th>Nombre</th>
                         <th>Color</th>
                         <th class="text-center">Estado</th>
@@ -88,6 +89,9 @@
                         <% let i = 1;_dataColores.forEach(e=>{%>
                             <tr>
                                 <td><%= i%></td>
+                                <td>
+                                  <a href="/metadata/colores/eliminar/<%=e.id%>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                </td>
                                 <td><%=e.nombre%></td>
                                 <td><div style="border-radius: 5px;width: 50px;height: 10px;background:<%= e.color %>"></div></td>
                                 <%if(e.estado == 'Activo'){%>
@@ -103,6 +107,17 @@
                     <%}%>
                   </tbody>
               </table>
+              <% if(_dataColores.length == 0){%>
+                <div class="col-12 ">
+                  <div class="mx-auto" style="max-width: 200px;">
+                    <%-include ('_codigoPedazos/recursoSVG/404NotFound.ejs')-%>
+                  </div>
+                  <div class="mx-auto text-center" style="max-width: 200px;">
+                    No hay datos encontrados..!
+                  </div>
+                </div>
+                
+              <%}%>
             </div>
           </div>
 
