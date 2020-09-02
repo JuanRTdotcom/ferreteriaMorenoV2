@@ -4944,7 +4944,7 @@ a.badge-warning:focus, a.badge-warning.focus {
 .badge-danger {
   color: #fff;
   /* background-color: #ff0b8b; */
-  background-color: #E41933;
+  background-color: #ea2f39;
 }
 
 a.badge-danger:hover, a.badge-danger:focus {
