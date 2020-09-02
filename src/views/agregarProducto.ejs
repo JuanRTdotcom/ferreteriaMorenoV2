@@ -52,14 +52,14 @@
   }
 
   .image-upload-wrap {
-    border: 4px dashed #355ccc;
+    border: 4px dashed #E74A3B;
     position: relative;
   }
 
   .image-dropping,
   .image-upload-wrap:hover {
-    background-color: #355bcc42;
-    border: 4px dashed #355ccc;
+    background-color: #E74A3B42;
+    border: 4px dashed #E74A3B;
   }
 
   .image-title-wrap {
@@ -119,7 +119,7 @@
       <div
         class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
       >
-        <h6 class="m-0 font-weight-bold text-primary">
+        <h6 class="m-0 font-weight-bold text-primary" style="color:#E74A3B !important">
           <i class="fas fa-fw fa-plus-circle"></i> Agregar producto
         </h6>
       </div>
@@ -209,7 +209,7 @@
                
               </div>
               <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
-                <button type="sumbit" class="btn btn-primary col-12">
+                <button type="sumbit" class="btn btn-danger col-12">
                   Registrar
                 </button>
               </div>
@@ -228,7 +228,7 @@
                     accept="image/*"
                   />
                   <div class="drag-text">
-                    <h3 style="font-size: 14px; font-weight: 900;">
+                    <h3 style="font-size: 14px;color:#E74A3B; font-weight: 900;">
                       <%- include ('_codigoPedazos/recursoSVG/uploadImage.ejs')
                       -%>
                       <br />
