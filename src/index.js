@@ -2,6 +2,7 @@ if(process.env.NODE_ENV != 'production'){
     require('dotenv').config()
 }
  
+let compression = require('compression')
 let express = require('express')
 let path = require('path')
 let methodOverRide = require('method-override')
@@ -17,6 +18,7 @@ require('./config/passport')
 
 
 //configuracion
+
 app.set('port', process.env.PORT || 4000) //servidor
 app.set('views',path.join(__dirname,'views'))
 app.set('view engine','ejs')
@@ -24,6 +26,7 @@ app.set('view engine','ejs')
 
 //middleware
 // app.use(express.json())
+app.use(compression())
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser('micookiesecreta'))
 app.use(methodOverRide('_method'))
