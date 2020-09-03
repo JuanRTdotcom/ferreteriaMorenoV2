@@ -77,8 +77,6 @@ rutas.get('/catalogo-online/getData', async (req,res)=>{
             }
         })
     })
-    console.log(coloresUnicos)
-    console.log(codigoColores)
     res.send({_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos,codigoColores})
 })
 
