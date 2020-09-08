@@ -56,7 +56,7 @@ function ajax(){
                 let _newelement = document.createElement('li')
                 _newelement.setAttribute('style','display:flex;justify-content:space-between;padding:10px 0 0;border-bottom: 1px #e4e4e4cf solid;')
                 _newelement.innerHTML = `
-                <div style="font-size: 12px;text-decoration: none;cursor: pointer;color:black;"><input style="display:none" id="${e}" onclick="filtroGeneral()" type="checkbox" value="${e}"/> 
+                <div style="font-size: 14px;text-decoration: none;cursor: pointer;color:black;"><input style="display:none" id="${e}" onclick="filtroGeneral()" type="checkbox" value="${e}"/> 
                 
                 <label for="${e}">${e}</label>
                 </div>
@@ -70,7 +70,7 @@ function ajax(){
                 let _newelement = document.createElement('li')
                 _newelement.setAttribute('style','display:flex;justify-content:space-between;padding:10px 0 0;border-bottom: 1px #e4e4e4cf solid;')
                 _newelement.innerHTML = `
-                <div  style="font-size: 12px;text-decoration: none;cursor: pointer;color:black;"><input style="display:none" id="${e}"  onclick="filtroGeneral()" type="checkbox" value="${e}"/>
+                <div  style="font-size: 14px;text-decoration: none;cursor: pointer;color:black;"><input style="display:none" id="${e}"  onclick="filtroGeneral()" type="checkbox" value="${e}"/>
                 <label for="${e}">${e}</label>
                 </div>
                 <div style="font-size: 12px">${cantidad.length}</div>
@@ -126,9 +126,9 @@ let llenarProductos = (database,inicio,final,tabla) => {
         _newelement.innerHTML = `
         <div class="product__item">
         <div class="product__item__text">
-            <h5 style="font-size: 12px;text-align: left;font-weight: 900;">${database[i].linea}</h5>
-            <h6 style="font-size: 14px;text-align: left;font-weight: 400;">${database[i].nombre}</h6>
-            <h6 style="font-size: 14px;text-align: left;font-weight: 400;color:#EA593F">S/. ${database[i].precio}</h6>
+            <h5 style="font-size: 13px;text-align: left;font-weight: 900;">${database[i].linea}</h5>
+            <h6 style="font-size: 15px;text-align: left;font-weight: 400;">${database[i].nombre}</h6>
+            <h6 style="font-size: 15px;text-align: left;font-weight: 400;color:#EA593F">S/. ${database[i].precio}</h6>
         </div>
         <div class="product__item__pic set-bg" style="background: url('${database[i].imagenURL}')center;background-size: contain;background-repeat: no-repeat;">
             <ul class="product__item__pic__hover">
