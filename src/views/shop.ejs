@@ -31,77 +31,72 @@
 
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
-    <div class="humberger__menu__wrapper">
-        <div class="humberger__menu__logo">
-            <a href="#"><img src="#" alt=""></a>
-        </div>
-        <div class="humberger__menu__cart">
-            <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-            </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
-        </div>
-        <div class="humberger__menu__widget">
-            <div class="header__top__right__language">
-                <img src="#" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>
-            <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Login</a>
-            </div>
-        </div>
-        <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./tienda.html">Shop</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contacto.html">contacto</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-        </div>
-        <div class="humberger__menu__contacto">
-            <ul>
-                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                <li>Free Shipping for all Order of $99</li>
-            </ul>
-        </div>
-    </div>
+    
 
-    <section class="breadcrumb-section set-bg" style="background:url(https://res.cloudinary.com/jrdotcom/image/upload/v1598658945/index/shop_nakxhp.jpg) center;background-size: cover;">
+    
+    <div class="container-fluid fixed-top shadow-sm"  style="background:white;" >
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text ">
-                        <h2 class="tituloGrande"> Catálogo Online</h2>
-                        <div class="breadcrumb__option mt-2">
-                            <a class="tituloGrande" href="/" target="_blank" style="background: #e31732;padding: 4px 8px;border-radius: 10px;">Inicio</a>
-                            <span class="tituloGrande"> - Catálogo</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <nav class="navbar navbar-light bg-light row" style="background: rgba(255, 255, 255, 0) !important">
+                <a class="navbar-brand col-12 col-md-2" id="pacentrar" href="/">
+                    <img src="https://res.cloudinary.com/jrdotcom/image/upload/v1599086799/index/logo3_kxis4j_i7cb7r.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                    Moreno
+                  </a>
+                  <form action="" class="form-inline col-md-8 col-12" id="buscarConsulta" style="padding: 0;">
+                    <div class="input-group" style="width: 100%">
+                       <input type="text" class="form-control" style="width: 100%" id="clienteVentas" autocomplete="off" onkeyup="leerDat()" placeholder="¿Qué estás buscando?" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                       <div class="input-group-append" style="position: absolute;
+                       right: 0px;
+                       z-index: 999;
+                       top: 18%;">
+                         <button type="submit" class="input-group-text" id="basic-addon2" style="background: #f3f3f300;
+                         border: 0;
+                         border-radius: 0;
+                         border-top-right-radius: 2px;
+                         border-bottom-right-radius: 2px;;"><i class="fa fa-search"></i></button>
+                       </div>
+                   </div>
+               </form>
+               <!-- <div class="col-12 col-md-2">
+                <ul class=" mr-auto mt-2 mt-lg-0 d-flex" >
+                    
+                  
+                        <a title="Iniciar sesión" href="/login" style="color:black;">
+                            <i class="fa fa-user-o"></i>
+                        </a>
+                    
+                   
+                  </ul>
+               </div> -->
+              </nav>
         </div>
-    </section>
+        
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="nav collapse navbar-collapse" id="navbarTogglerDemo01">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              
+            </div>
+            
+          </nav> -->
+    </div>
     <!-- Breadcrumb Section End -->
     <a class="_comunicaWhatsapp shadow" href="https://api.whatsapp.com/send?phone=51980497850&text=Hola!&nbsp;Ayudamee!" target="_blank">
         <i class="fa fa-whatsapp" aria-hidden="true"></i>
@@ -112,7 +107,7 @@
             <div class="row">
                 <div class="col-lg-2 col-md-3">
                     <div class="sidebar">
-                        <div class="sidebar__item">
+                        <!-- <div class="sidebar__item">
                             <form action=""  id="buscarConsulta">
                                  <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="clienteVentas" autocomplete="off" onkeyup="leerDat()" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -129,33 +124,32 @@
                                 </div>
                             </form>
                             
-                        </div>
-                        <div class="sidebar__item" style="padding: 0 0 35px 0;
-                        border-bottom: 1px #8e8e8e solid;">
-                            <a style="font-size: 24px;font-weight: 400;color:rgb(65, 65, 65)">Filtros <span style="float:right"> <a href="/catalogo-online" style="float:right;font-size: 24px;color:#EA593F"><i class="fa fa-refresh"></i></a></span> </a>
-                        </div>
-                        <div class="sidebar__item">
+                        </div> -->
+                        <!-- <div class="sidebar__item" style="margin:0;padding: 20px 0;">
+                            <a  data-toggle="collapse" href="#filtrosPqe" style="font-size: 18px;font-weight: 400;color:rgb(24, 24, 24)"><i class="fa fa-bars"></i>  Opciones de Búsqueda </a>
+                        </div> -->
+                        <div class="sidebar__item collapse show" id="filtrosPqe">
                             <a data-toggle="collapse" class="subTitulo" style="color: #EA593F;font-weight: 400;text-transform: uppercase;letter-spacing: 1.6px;" href="#_setHeading" aria-expanded="true">Rubro <span style="float:right;color:#EA593F"><i class="fa fa-chevron-down"></i></span> </a>
-                            <ul id="_setHeading" class="collapse show">
+                            <ul id="_setHeading" class="collapse show" Style="max-height: 350px;overflow: auto;">
                                 
 
                             </ul>
                         </div>
                         <div class="sidebar__item">
                             <a data-toggle="collapse" class="subTitulo" style="color: #EA593F;font-weight: 400;text-transform: uppercase;letter-spacing: 1.6px;" href="#_setBrands" aria-expanded="true">Marca <span style="float:right;color:#EA593F"><i class="fa fa-chevron-down"></i></span></a>
-                            <ul id="_setBrands"  class="collapse show" >
+                            <ul id="_setBrands"  class="collapse show" Style="max-height: 350px;overflow: auto;">
                                 
 
                             </ul>
                         </div>
-                        <div class="sidebar__item sidebar__item__color--option d-flex flex-column" >
+                        <!-- <div class="sidebar__item sidebar__item__color--option d-flex flex-column" >
                             <a data-toggle="collapse" class="subTitulo" style="color: #EA593F;font-weight: 400;text-transform: uppercase;letter-spacing: 1.6px;" href="#_setColours" aria-expanded="true">Colores <span style="float:right;color:#EA593F"><i class="fa fa-chevron-down"></i></span></a>
                             
                             <div id="_setColours"  class="collapse show" style="display: flex;flex-wrap: wrap;" >
                                 
 
                             </div>
-                        </div>
+                        </div> -->
                         <!-- <div class="sidebar__item">
                             <h4>Price</h4>
                             <div class="price-range-wrap">
@@ -182,7 +176,7 @@
                     <div class="filter__item">
                         <div class="row" style="justify-content: space-between;">
                            
-                            <div class="col-lg-4 col-md-4 " style="    font-size: 12px;
+                            <div class="col-lg-4 col-md-4 " id="noMuestra"  style="    font-size: 12px;
                             font-weight: 600;
                             display: flex;
                             height: 43px;
@@ -217,7 +211,7 @@
     <!-- Product Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="site-footer " style="padding: 0 !important; background: rgb(22, 22, 22) !important;"  id="contact-section" >
+    <footer class="site-footer " style="padding: 0 !important; background: rgb(248, 248, 248) !important;box-shadow: 0 0 10px #00000010;"  id="contact-section" >
         <div class="container">
 
 
