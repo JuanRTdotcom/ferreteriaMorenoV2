@@ -1,6 +1,6 @@
 // 
 /////////////////////////////
-
+let _load = document.getElementById('load')
 
 
 let _database = []
@@ -142,6 +142,11 @@ let llenarProductos = (database,inicio,final,tabla) => {
      }
     }
     
+    _load.style.opacity = 0
+    setTimeout(()=>{
+        
+        _load.style.display='none'
+    },400)
 }
 
 let filtroColor = detalle => {

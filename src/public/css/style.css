@@ -2556,6 +2556,9 @@ iframe {
   font-weight: 400;
   text-align: center;
 }
+.load div {
+  color: #e31732 !important;
+}
 .loader div {
   color: #e31732 !important;
 }
@@ -3121,4 +3124,17 @@ input[type="checkbox"]:checked + label:before {
   border-left-color: transparent;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.load{
+  background: white;
+  width: 100vw;
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+  display: flex;
+  opacity: 1;
+  transition: .3s;
+  justify-content: center;
+  align-items: center;
 }
