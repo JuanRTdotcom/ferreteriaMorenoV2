@@ -177,7 +177,7 @@
                   <%}%>
                 </select>
               </div>
-              <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
+              <!-- <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
                 <div class="input-group-prepend" style="width: 42px;">
                   <label class="input-group-text" for="">
                     <i class="fa fa-paint-brush"></i>
@@ -185,13 +185,13 @@
                 </div>
                 <select class="custom-select" name="color" id="" required>
                   <option value="" selected disabled>Selec. color...</option>
-                  <%if(_dataColor.length >0 ){%>
-                    <% _dataColor.forEach(e=>{%>
-                      <option value="<%=e.nombre%>"><%=e.nombre%></option>
-                    <%})%>
-                  <%}%>
+                  if(_dataColor.length >0 ){
+                     _dataColor.forEach(e=>{
+                      <option value="=e.nombre%>">=e.nombre</option>
+                    })
+                  }
                 </select>
-              </div>
+              </div> -->
               <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
                 <div class="input-group-prepend" style="width: 42px;">
                   <span class="input-group-text" id="basic-addon1">

@@ -208,7 +208,7 @@ multer({
     }).single('image')
 ,async (req,res)=>{
     
-    const{nombre,rubro,linea,color,precio} = req.body
+    const{nombre,rubro,linea,precio} = req.body
     const{originalname} = req.file
     let _quitarNumeroNombre = path.extname(originalname).toLocaleLowerCase().length
     let nombrefoto = originalname.substr(0,originalname.length-_quitarNumeroNombre)
@@ -223,9 +223,9 @@ multer({
     if(!linea){
         error.push({text:'Ingresar una linea!'})
     }
-    if(!color){
-        error.push({text:'Ingresar un color!'})
-    }
+    // if(!color){
+    //     error.push({text:'Ingresar un color!'})
+    // }
     if(!precio){
         error.push({text:'Ingresar un precio!'})
     }
@@ -251,7 +251,7 @@ multer({
         
         const imagenSubida = await cloudinary.v2.uploader.upload(objetivo)
         // console.log(imagenSubida)
-        const miNuevoProducto = new nuevoProducto({nombre,rubro,linea,color,precio,imagenURL:imagenSubida.secure_url,public_id:imagenSubida.public_id})
+        const miNuevoProducto = new nuevoProducto({nombre,rubro,linea,precio,imagenURL:imagenSubida.secure_url,public_id:imagenSubida.public_id})
         await miNuevoProducto.save()
         req.flash('success_msg','Producto Agregado!')
      
