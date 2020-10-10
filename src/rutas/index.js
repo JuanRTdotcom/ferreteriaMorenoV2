@@ -52,32 +52,32 @@ rutas.get('/catalogo-online', async (req,res)=>{
 })
 
 rutas.get('/catalogo-online/getData', async (req,res)=>{
-    const _misDatosBD = await nuevoProducto.find({},{"rubro":1,"color":1,"linea":1,"precio":1,"nombre":1,"imagenURL":1,"_id":0})
-    const _datosColores = await nuevoColor.find()
+    const _misDatosBD = await nuevoProducto.find({},{"rubro":1,"color":1,"idP":1,"linea":1,"precio":1,"nombre":1,"imagenURL":1,"_id":0})
+    // const _datosColores = await nuevoColor.find()
     let misRubros = _misDatosBD.map(e=>{ 
         return e.rubro 
     }) 
     
-    let misColores = _misDatosBD.map(e=>{ 
-        return e.color 
-    })
+    // let misColores = _misDatosBD.map(e=>{ 
+    //     return e.color 
+    // })
     
     let misLineas = _misDatosBD.map(e=>{ 
         return e.linea 
     }) 
     let rubrosUnicos=misRubros.filter(unique);
-    let coloresUnicos=misColores.filter(unique);
+    // let coloresUnicos=misColores.filter(unique);
     let lineasUnicos=misLineas.filter(unique);
 
-    let codigoColores = []
-    coloresUnicos.forEach(e=>{
-        _datosColores.forEach(x=>{
-            if(x.nombre == e){
-                codigoColores.push(x.color)
-            }
-        })
-    })
-    res.send({_misDatosBD,rubrosUnicos,coloresUnicos,lineasUnicos,codigoColores})
+    // let codigoColores = []
+    // coloresUnicos.forEach(e=>{
+    //     _datosColores.forEach(x=>{
+    //         if(x.nombre == e){
+    //             codigoColores.push(x.color)
+    //         }
+    //     })
+    // })
+    res.send({_misDatosBD,rubrosUnicos,lineasUnicos})
 })
 
 rutas.post('/login',passport.authenticate('local',{
@@ -150,7 +150,7 @@ rutas.put('/reporte-producto/editarproducto/:id',estaLogueado,
 
 async (req,res)=>{
     
-    const{nombre,rubro,linea,color,precio} = req.body
+    const{nombre,rubro,linea,precio} = req.body
 
     const error = []
     
@@ -163,9 +163,6 @@ async (req,res)=>{
     if(!linea){
         error.push({text:'Ingresar una linea!'})
     }
-    if(!color){
-        error.push({text:'Ingresar un color!'})
-    }
     if(!precio){
         error.push({text:'Ingresar un precio!'})
     }
@@ -173,7 +170,7 @@ async (req,res)=>{
         req.flash('error','Error al editar')
     }else{
         
-        await nuevoProducto.findByIdAndUpdate(req.params.id,{nombre,rubro,linea,color,precio})
+        await nuevoProducto.findByIdAndUpdate(req.params.id,{nombre,rubro,linea,precio})
         req.flash('success_msg','Producto Modificado!')
         res.redirect('/reporte-producto')
     }
@@ -208,7 +205,7 @@ multer({
     }).single('image')
 ,async (req,res)=>{
     
-    const{nombre,rubro,linea,precio} = req.body
+    const{idP,nombre,rubro,linea,precio} = req.body
     const{originalname} = req.file
     let _quitarNumeroNombre = path.extname(originalname).toLocaleLowerCase().length
     let nombrefoto = originalname.substr(0,originalname.length-_quitarNumeroNombre)
@@ -251,7 +248,7 @@ multer({
         
         const imagenSubida = await cloudinary.v2.uploader.upload(objetivo)
         // console.log(imagenSubida)
-        const miNuevoProducto = new nuevoProducto({nombre,rubro,linea,precio,imagenURL:imagenSubida.secure_url,public_id:imagenSubida.public_id})
+        const miNuevoProducto = new nuevoProducto({idP,nombre,rubro,linea,precio,imagenURL:imagenSubida.secure_url,public_id:imagenSubida.public_id})
         await miNuevoProducto.save()
         req.flash('success_msg','Producto Agregado!')
      

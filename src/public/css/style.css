@@ -2996,8 +2996,14 @@ form .text-black {
 #clienteVentas:focus #basic-addon2 {
   background: #fff;
 }
-._productos:hover {
-  transform: scale(0.9);
+.product__item__pic{
+  transition: .3s;
+}
+._productos:hover .product__item__pic{
+  
+    transform: scale(0.9);
+  
+  
 }
 .sidebar li {
   transition: 0.3s;

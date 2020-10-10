@@ -157,6 +157,26 @@
                   class="form-control"
                   autofocus 
                   required
+                  disabled
+                  autocomplete="off"
+                  name=""
+                  value="<%= productoEditar.idP%>"
+                  placeholder=""
+                  aria-label=""
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+              <div class="input-group mb-3 col-12">
+                <div class="input-group-prepend" style="width: 42px;">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="fa fa-font"></i>
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  autofocus 
+                  required
                   autocomplete="off"
                   name="nombre"
                   value="<%= productoEditar.nombre%>"
@@ -196,21 +216,7 @@
                     <%}%>
                   </select>
                 </div>
-                <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
-                  <div class="input-group-prepend" style="width: 42px;">
-                    <label class="input-group-text" for="">
-                      <i class="fa fa-paint-brush"></i>
-                    </label>
-                  </div>
-                  <select class="custom-select" name="color" id="" required>
-                    <option value="<%= productoEditar.color%>" selected ><%= productoEditar.color%></option>
-                    <%if(_dataColor.length >0 ){%>
-                      <% _dataColor.forEach(e=>{%>
-                        <option value="<%=e.nombre%>"><%=e.nombre%></option>
-                      <%})%>
-                    <%}%>
-                  </select>
-                </div>
+               
                 <div class="input-group mb-3 col-lg-12 col-12 col-md-12">
                   <div class="input-group-prepend" style="width: 42px;">
                     <span class="input-group-text" id="basic-addon1">

@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 const productoSchema = new Schema({
+    idP: {type: String, required: true},
     nombre: {type: String, required: true},
     rubro: {type: String, required: true},
     linea: {type: String, required: true},

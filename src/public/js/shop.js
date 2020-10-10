@@ -1,4 +1,5 @@
 // 
+var clipboard = new Clipboard('.copiarCod');
 /////////////////////////////
 let _load = document.getElementById('load')
 
@@ -107,6 +108,7 @@ let crearPaginacion = (database,dbLength) => {
             let inicio = (cantiadPaginas*page) -cantiadPaginas
             let final = (page *cantiadPaginas)-1
             // buscarProductos(database)
+            console.log(database)
             llenarProductos(database,inicio,final,setProductos)
         }
     });
@@ -131,11 +133,12 @@ let llenarProductos = (database,inicio,final,tabla) => {
             <h6 style="font-size: 15px;text-align: left;font-weight: 400;color:#EA593F">S/. ${database[i].precio}</h6>
         </div>
         <div class="product__item__pic set-bg" style="background: url('${database[i].imagenURL}')center;background-size: contain;background-repeat: no-repeat;">
+        
             <ul class="product__item__pic__hover">
-                <li><a><i class="fa fa-heart"></i></a></li>
+                <li><a style="cursor:pointer;" title="Copiar código!" class="copiarCod" data-clipboard-target="#${database[i].idP}"><i class="fa fa-clone"></i></a></li>
             </ul>
         </div>
-        
+        <div style="padding:8px 6px;font-size:12px;">Código: <i id="${database[i].idP}">${database[i].idP}</i> </div>
     </div>
         `
         tabla.appendChild(_newelement)
