@@ -135,7 +135,7 @@ let llenarProductos = (database,inicio,final,tabla) => {
         <div class="product__item__pic set-bg" style="background: url('${database[i].imagenURL}')center;background-size: contain;background-repeat: no-repeat;">
         
             <ul class="product__item__pic__hover">
-                <li><a style="cursor:pointer;" title="Copiar código!" class="copiarCod" data-clipboard-target="#${database[i].idP}"><i class="fa fa-clone"></i></a></li>
+                <li><a style="cursor:pointer;" title="Copiar código" class="copiarCod" data-clipboard-target="#${database[i].idP}"><i class="fa fa-clone"></i></a></li>
             </ul>
         </div>
         <div style="padding:8px 6px;font-size:12px;">Código: <i id="${database[i].idP}">${database[i].idP}</i> </div>
